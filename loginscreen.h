@@ -2,6 +2,7 @@
 #define LOGINSCREEN_H
 
 #include <QMainWindow>
+#include "reserveroom.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginScreen; }
@@ -20,5 +21,6 @@ private slots:
 
 private:
     Ui::LoginScreen *ui;
+    ReserveRoom *r;
 };
 #endif // LOGINSCREEN_H
