@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "reserveroom.h"
+#include "receptionist.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginScreen; }
@@ -22,5 +23,6 @@ private slots:
 private:
     Ui::LoginScreen *ui;
     ReserveRoom *r;
+    Receptionist *rec;
 };
 #endif // LOGINSCREEN_H

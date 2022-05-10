@@ -4,8 +4,6 @@
 #include <QVector>
 
 
-#include<reserveroom.h>
-
 QVector<QVector<QString>>myDataBase;
 
 LoginScreen::LoginScreen(QWidget *parent)
@@ -28,8 +26,8 @@ void LoginScreen::on_Sign_In_clicked()
     QString localUserName =  ui->lineEdit_UderName->text();
     QString localPassword =  ui->lineEdit_Password->text();
     hide();
-    r = new ReserveRoom(this);
-    r->show();
+    rec = new Receptionist();
+    rec->show();
 
 
 
