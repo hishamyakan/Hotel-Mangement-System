@@ -6,6 +6,7 @@ AddRoomReservation::AddRoomReservation(QWidget *parent) :
     ui(new Ui::AddRoomReservation)
 {
     ui->setupUi(this);
+    this->setFixedSize(481,137);
 
         ui->roomType->addItem("Single Room");
         ui->roomType->addItem("Double Room");

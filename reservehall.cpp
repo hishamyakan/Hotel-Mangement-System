@@ -6,6 +6,7 @@ ReserveHall::ReserveHall(QWidget *parent) :
     ui(new Ui::ReserveHall)
 {
     ui->setupUi(this);
+    this->setFixedSize(692,274);
 
     ui->EventType->addItem("Wedding");
     ui->EventType->addItem("Meeting");

@@ -12,6 +12,7 @@ ReserveVehicle::ReserveVehicle(QWidget *parent) :
     ui(new Ui::ReserveVehicle)
 {
     ui->setupUi(this);
+    this->setFixedSize(555,152);
     this->setWindowTitle("Reserve a vehicle");
 
     ui->vType->addItem("Car");

@@ -8,6 +8,7 @@ ReserveRoom::ReserveRoom(QWidget *parent) :
     ui(new Ui::ReserveRoom)
 {
     ui->setupUi(this);
+    this->setFixedSize(713,269);
     this->setWindowTitle("Reserve a Room");
 
 

@@ -1,5 +1,6 @@
 #include "checkout.h"
 #include "ui_checkout.h"
+#include <QMessageBox>
 
 CheckOut::CheckOut(QWidget *parent) :
     QMainWindow(parent),
@@ -8,6 +9,7 @@ CheckOut::CheckOut(QWidget *parent) :
     ui->setupUi(this);
 
     ui->G_FeedBack->setEnabled(false);
+    this->setFixedSize(451,428);
 
 
 }
@@ -40,5 +42,12 @@ void CheckOut::on_CreditCard_clicked()
 void CheckOut::on_Cash_clicked()
 {
     ui->CreditCardNumber->setEnabled(false);
+}
+
+
+void CheckOut::on_addFeedBack_clicked()
+{
+    QMessageBox::information(this,"FeedBack","Congratulations, FeedBack added successfully.");
+
 }
 

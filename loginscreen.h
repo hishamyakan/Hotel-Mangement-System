@@ -2,8 +2,11 @@
 #define LOGINSCREEN_H
 
 #include <QMainWindow>
-#include "reserveroom.h"
+
 #include "receptionist.h"
+#include "hr.h"
+#include "manger.h"
+#include "editroomstatus.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginScreen; }
@@ -22,7 +25,10 @@ private slots:
 
 private:
     Ui::LoginScreen *ui;
-    ReserveRoom *r;
     Receptionist *rec;
+    HR * hr;
+    Manger *manger;
+    EditRoomStatus *hk;
+    EditRoomStatus *me;
 };
 #endif // LOGINSCREEN_H

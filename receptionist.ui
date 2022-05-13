@@ -66,9 +66,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="CheckRoom">
+      <widget class="QPushButton" name="CheckRes">
        <property name="text">
-        <string>Check Avilable Room</string>
+        <string>Check Avilable Resources</string>
        </property>
       </widget>
      </item>

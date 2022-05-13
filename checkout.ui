@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>653</width>
+    <width>783</width>
     <height>557</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>341</x>
       <y>57</y>
-      <width>306</width>
+      <width>451</width>
       <height>428</height>
      </rect>
     </property>
@@ -31,12 +31,12 @@
       <rect>
        <x>10</x>
        <y>207</y>
-       <width>100</width>
+       <width>131</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>Additional Comments</string>
+      <string>Additional Comments     </string>
      </property>
     </widget>
     <widget class="QPlainTextEdit" name="plainTextEdit">
@@ -62,12 +62,12 @@
       <string>Add FeedBack</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>23</y>
-       <width>286</width>
+       <width>343</width>
        <height>40</height>
       </rect>
      </property>
@@ -75,7 +75,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>On A scale of 1 to 5 how do you describe your overall visit?</string>
+         <string>On A scale of 1 to 5 how do you describe your overall visit?                   </string>
         </property>
        </widget>
       </item>
@@ -135,12 +135,12 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>69</y>
-       <width>178</width>
+       <width>220</width>
        <height>40</height>
       </rect>
      </property>
@@ -148,7 +148,7 @@
       <item>
        <widget class="QLabel" name="label_2">
         <property name="text">
-         <string>Would you recommend us to a friend</string>
+         <string>Would you recommend us to a friend              </string>
         </property>
        </widget>
       </item>
@@ -172,12 +172,12 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>115</y>
-       <width>229</width>
+       <width>292</width>
        <height>40</height>
       </rect>
      </property>
@@ -185,7 +185,7 @@
       <item>
        <widget class="QLabel" name="label_3">
         <property name="text">
-         <string>On A scale of 1 to 5 how do you describe food?</string>
+         <string>On A scale of 1 to 5 how do you describe food?                     </string>
         </property>
        </widget>
       </item>
@@ -230,12 +230,12 @@
       </item>
      </layout>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>161</y>
-       <width>246</width>
+       <width>294</width>
        <height>40</height>
       </rect>
      </property>
@@ -243,7 +243,7 @@
       <item>
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>On A scale of 1 to 5 how do you describe services?</string>
+         <string>On A scale of 1 to 5 how do you describe services?                </string>
         </property>
        </widget>
       </item>
@@ -347,7 +347,7 @@
      <string>Check out</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -383,7 +383,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>342</x>
@@ -431,7 +431,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>653</width>
+     <width>783</width>
      <height>21</height>
     </rect>
    </property>

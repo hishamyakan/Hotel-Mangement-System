@@ -11,6 +11,7 @@ AddGuestDetails::AddGuestDetails(QWidget *parent) :
     ui(new Ui::AddGuestDetails)
 {
     ui->setupUi(this);
+    this->setFixedSize(524,194);
 }
 
 AddGuestDetails::~AddGuestDetails()

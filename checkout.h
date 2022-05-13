@@ -24,6 +24,8 @@ private slots:
 
     void on_Cash_clicked();
 
+    void on_addFeedBack_clicked();
+
 private:
     Ui::CheckOut *ui;
 };

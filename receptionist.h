@@ -5,8 +5,10 @@
 #include "reserveroom.h"
 #include "reservevehicle.h"
 #include "reservehall.h"
+#include "reservetable.h"
 #include "checkout.h"
 #include "updatedeleteres.h"
+#include "checkavailableroom.h"
 
 
 namespace Ui {
@@ -34,13 +36,19 @@ private slots:
 
     void on_updateOrDelete_clicked();
 
+    void on_ReserveTable_clicked();
+
+    void on_CheckRes_clicked();
+
 private:
     Ui::Receptionist *ui;
     ReserveRoom *r;
     ReserveVehicle *v;
     ReserveHall *h;
+    ReserveTable *t;
     CheckOut *c;
     updateDeleteRes *u;
+    CheckAvailableRoom *ch;
 
 
 
