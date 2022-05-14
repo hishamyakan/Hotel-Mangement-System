@@ -15,6 +15,14 @@ SOURCES += \
     $$PWD/View/Receptionist/checkout.cpp \
     $$PWD/View/MaintenanceOrHouseKeeping/editroomstatus.cpp \
     $$PWD/View/HR/hr.cpp \
+    Control/Date.cpp \
+    Control/employee.cpp \
+    Control/employee_manager.cpp \
+    Control/guest.cpp \
+    Control/person.cpp \
+    Control/reservable.cpp \
+    Control/reservation.cpp \
+    Model/employee_PBCfg.cpp \
     main.cpp \
     $$PWD/View/loginscreen.cpp \
     $$PWD/View/Manger/manger.cpp \
@@ -39,7 +47,16 @@ HEADERS += \
     $$PWD/View/Receptionist/reserveroom.h \
     $$PWD/View/Receptionist/reservetable.h \
     $$PWD/View/Receptionist/reservevehicle.h \
-    $$PWD/View/Receptionist/updatedeleteres.h
+    $$PWD/View/Receptionist/updatedeleteres.h \
+    Control/Date.h \
+    Control/employee.h \
+    Control/employee_manager.h \
+    Control/guest.h \
+    Control/hotelSystem.h \
+    Control/hotel_types.h \
+    Control/person.h \
+    Control/reservable.h \
+    Control/reservation.h
 
 FORMS += \
     $$PWD/View/Receptionist/addguestdetails.ui \
