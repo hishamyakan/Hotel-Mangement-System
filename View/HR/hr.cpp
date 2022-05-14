@@ -2,7 +2,7 @@
 #include "ui_hr.h"
 #include <QTableWidget>
 #include <QStringList>
-#include "loginscreen.h"
+#include "View/loginscreen.h"
 
 
 

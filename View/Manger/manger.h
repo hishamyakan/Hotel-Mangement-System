@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 
-#include "hr.h"
-#include "checkavailableroom.h"
+#include "View/HR/hr.h"
+#include "View/Receptionist/checkavailableroom.h"
 
 namespace Ui {
 class Manger;
