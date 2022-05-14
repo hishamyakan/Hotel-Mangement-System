@@ -9,53 +9,53 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    addguestdetails.cpp \
-    addroomreservation.cpp \
-    checkavailableroom.cpp \
-    checkout.cpp \
-    editroomstatus.cpp \
-    hr.cpp \
+    $$PWD/View/Receptionist/addguestdetails.cpp \
+    $$PWD/View/Receptionist/addroomreservation.cpp \
+    $$PWD/View/Receptionist/checkavailableroom.cpp \
+    $$PWD/View/Receptionist/checkout.cpp \
+    $$PWD/View/MaintenanceOrHouseKeeping/editroomstatus.cpp \
+    $$PWD/View/HR/hr.cpp \
     main.cpp \
-    loginscreen.cpp \
-    manger.cpp \
-    receptionist.cpp \
-    reservehall.cpp \
-    reserveroom.cpp \
-    reservetable.cpp \
-    reservevehicle.cpp \
-    updatedeleteres.cpp
+    $$PWD/View/loginscreen.cpp \
+    $$PWD/View/Manger/manger.cpp \
+    $$PWD/View/Receptionist/receptionist.cpp \
+    $$PWD/View/Receptionist/reservehall.cpp \
+    $$PWD/View/Receptionist/reserveroom.cpp \
+    $$PWD/View/Receptionist/reservetable.cpp \
+    $$PWD/View/Receptionist/reservevehicle.cpp \
+    $$PWD/View/Receptionist/updatedeleteres.cpp
 
 HEADERS += \
-    addguestdetails.h \
-    addroomreservation.h \
-    checkavailableroom.h \
-    checkout.h \
-    editroomstatus.h \
-    hr.h \
-    loginscreen.h \
-    manger.h \
-    receptionist.h \
-    reservehall.h \
-    reserveroom.h \
-    reservetable.h \
-    reservevehicle.h \
-    updatedeleteres.h
+    $$PWD/View/Receptionist/addguestdetails.h \
+    $$PWD/View/Receptionist/addroomreservation.h \
+    $$PWD/View/Receptionist/checkavailableroom.h \
+    $$PWD/View/Receptionist/checkout.h \
+    $$PWD/View/MaintenanceOrHouseKeeping/editroomstatus.h \
+    $$PWD/View/HR/hr.h \
+    $$PWD/View/loginscreen.h \
+    $$PWD/View/Manger/manger.h \
+    $$PWD/View/Receptionist/receptionist.h \
+    $$PWD/View/Receptionist/reservehall.h \
+    $$PWD/View/Receptionist/reserveroom.h \
+    $$PWD/View/Receptionist/reservetable.h \
+    $$PWD/View/Receptionist/reservevehicle.h \
+    $$PWD/View/Receptionist/updatedeleteres.h
 
 FORMS += \
-    addguestdetails.ui \
-    addroomreservation.ui \
-    checkavailableroom.ui \
-    checkout.ui \
-    editroomstatus.ui \
-    hr.ui \
-    loginscreen.ui \
-    manger.ui \
-    receptionist.ui \
-    reservehall.ui \
-    reserveroom.ui \
-    reservetable.ui \
-    reservevehicle.ui \
-    updatedeleteres.ui
+    $$PWD/View/Receptionist/addguestdetails.ui \
+    $$PWD/View/Receptionist/addroomreservation.ui \
+    $$PWD/View/Receptionist/checkavailableroom.ui \
+    $$PWD/View/Receptionist/checkout.ui \
+    $$PWD/View/MaintenanceOrHouseKeeping/editroomstatus.ui \
+    $$PWD/View/HR/hr.ui \
+    $$PWD/View/loginscreen.ui \
+    $$PWD/View/Manger/manger.ui \
+    $$PWD/View/Receptionist/receptionist.ui \
+    $$PWD/View/Receptionist/reservehall.ui \
+    $$PWD/View/Receptionist/reserveroom.ui \
+    $$PWD/View/Receptionist/reservetable.ui \
+    $$PWD/View/Receptionist/reservevehicle.ui \
+    $$PWD/View/Receptionist/updatedeleteres.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
