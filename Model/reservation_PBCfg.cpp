@@ -6,7 +6,7 @@
  */
 
 
-#include "reservation.h"
+#include "Control/reservation.h"
 
 vector<Reservation> current_reservations;
 

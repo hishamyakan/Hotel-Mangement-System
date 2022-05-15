@@ -6,9 +6,9 @@
  */
 
 
-#include "receptionist.h"
-#include "reservable.h"
-#include "reservable_manager.h"
+#include "Control/receptionist_member.h"
+#include "Control/reservable.h"
+#include "Control/reservable_manager.h"
 #include <vector>
 
 bool Receptionist_Member::reserveRoom(Room_Reservation res){

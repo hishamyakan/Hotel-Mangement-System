@@ -14,7 +14,7 @@
 #include "guest.h"
 #include "hr_member.h"
 #include "maintenance.h"
-#include "receptionist.h"
+#include "receptionist_member.h"
 
 #include "reservable.h"
 #include "reservation.h"

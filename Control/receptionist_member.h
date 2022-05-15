@@ -5,11 +5,11 @@
  *      Author: User
  */
 
-#ifndef RECEPTIONIST_H_
-#define RECEPTIONIST_H_
+#ifndef RECEPTIONIST_MEMBER_H_
+#define RECEPTIONIST_MEMBER_H_
 
-#include "employee.h"
-#include "reservation.h"
+#include "Control/employee.h"
+#include "Control/reservation.h"
 class Receptionist_Member : public Employee{
 
 public:
@@ -29,4 +29,4 @@ public:
 
 };
 
-#endif /* RECEPTIONIST_H_ */
+#endif /* RECEPTIONIST_MEMBER_H_ */

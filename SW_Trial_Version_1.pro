@@ -10,8 +10,10 @@ CONFIG += c++11
 
 SOURCES += \
     Control/maintenance.cpp \
+    Control/receptionist_member.cpp \
     Control/reservable_manager.cpp \
     Model/reservable_PBCfg.cpp \
+    Model/reservation_PBCfg.cpp \
     View/Receptionist/addguestdetails.cpp \
     View/Receptionist/addroomreservation.cpp \
     View/Receptionist/checkavailableroom.cpp \
@@ -39,6 +41,7 @@ SOURCES += \
 
 HEADERS += \
     Control/maintenance.h \
+    Control/receptionist_member.h \
     Control/reservable_manager.h \
     View/Receptionist/addguestdetails.h \
     View/Receptionist/addroomreservation.h \

@@ -11,7 +11,7 @@
 #ifndef RESERVABLE_H_
 #define RESERVABLE_H_
 
-#include "reservation.h"
+#include "Control/reservation.h"
 #include "Control/hotel_types.h"
 
 #define SINGLE_ROOM_OFFSET 			100
