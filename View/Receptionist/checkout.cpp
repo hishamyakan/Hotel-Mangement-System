@@ -9,7 +9,7 @@ CheckOut::CheckOut(QWidget *parent) :
     ui->setupUi(this);
 
     ui->G_FeedBack->setEnabled(false);
-    this->setFixedSize(451,428);
+    this->setFixedSize(783,557);
 
 
 }

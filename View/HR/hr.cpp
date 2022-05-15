@@ -3,10 +3,10 @@
 #include <QTableWidget>
 #include <QStringList>
 #include "View/loginscreen.h"
+
 #include "Control/hotelSystem.h"
 #include <vector>
 #include<iostream>
-
 using namespace std;
 
 /*These pre procesors are used for determining the col number*/
