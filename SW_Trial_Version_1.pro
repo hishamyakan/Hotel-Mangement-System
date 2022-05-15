@@ -9,12 +9,12 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    $$PWD/View/Receptionist/addguestdetails.cpp \
-    $$PWD/View/Receptionist/addroomreservation.cpp \
-    $$PWD/View/Receptionist/checkavailableroom.cpp \
-    $$PWD/View/Receptionist/checkout.cpp \
-    $$PWD/View/MaintenanceOrHouseKeeping/editroomstatus.cpp \
-    $$PWD/View/HR/hr.cpp \
+    View/Receptionist/addguestdetails.cpp \
+    View/Receptionist/addroomreservation.cpp \
+    View/Receptionist/checkavailableroom.cpp \
+    View/Receptionist/checkout.cpp \
+    View/MaintenanceOrHouseKeeping/editroomstatus.cpp \
+    View/HR/hr.cpp \
     Control/Date.cpp \
     Control/employee.cpp \
     Control/employee_manager.cpp \
@@ -25,30 +25,30 @@ SOURCES += \
     Control/reservation.cpp \
     Model/employee_PBCfg.cpp \
     main.cpp \
-    $$PWD/View/loginscreen.cpp \
-    $$PWD/View/Manger/manger.cpp \
-    $$PWD/View/Receptionist/receptionist.cpp \
-    $$PWD/View/Receptionist/reservehall.cpp \
-    $$PWD/View/Receptionist/reserveroom.cpp \
-    $$PWD/View/Receptionist/reservetable.cpp \
-    $$PWD/View/Receptionist/reservevehicle.cpp \
-    $$PWD/View/Receptionist/updatedeleteres.cpp
+    View/loginscreen.cpp \
+    View/Manger/manger.cpp \
+    View/Receptionist/receptionist.cpp \
+    View/Receptionist/reservehall.cpp \
+    View/Receptionist/reserveroom.cpp \
+    View/Receptionist/reservetable.cpp \
+    View/Receptionist/reservevehicle.cpp \
+    View/Receptionist/updatedeleteres.cpp
 
 HEADERS += \
-    $$PWD/View/Receptionist/addguestdetails.h \
-    $$PWD/View/Receptionist/addroomreservation.h \
-    $$PWD/View/Receptionist/checkavailableroom.h \
-    $$PWD/View/Receptionist/checkout.h \
-    $$PWD/View/MaintenanceOrHouseKeeping/editroomstatus.h \
-    $$PWD/View/HR/hr.h \
-    $$PWD/View/loginscreen.h \
-    $$PWD/View/Manger/manger.h \
-    $$PWD/View/Receptionist/receptionist.h \
-    $$PWD/View/Receptionist/reservehall.h \
-    $$PWD/View/Receptionist/reserveroom.h \
-    $$PWD/View/Receptionist/reservetable.h \
-    $$PWD/View/Receptionist/reservevehicle.h \
-    $$PWD/View/Receptionist/updatedeleteres.h \
+    View/Receptionist/addguestdetails.h \
+    View/Receptionist/addroomreservation.h \
+    View/Receptionist/checkavailableroom.h \
+    View/Receptionist/checkout.h \
+    View/MaintenanceOrHouseKeeping/editroomstatus.h \
+    View/HR/hr.h \
+    View/loginscreen.h \
+    View/Manger/manger.h \
+    View/Receptionist/receptionist.h \
+    View/Receptionist/reservehall.h \
+    View/Receptionist/reserveroom.h \
+    View/Receptionist/reservetable.h \
+    View/Receptionist/reservevehicle.h \
+    View/Receptionist/updatedeleteres.h \
     Control/Date.h \
     Control/employee.h \
     Control/employee_manager.h \
@@ -61,20 +61,20 @@ HEADERS += \
     Control/reservation.h
 
 FORMS += \
-    $$PWD/View/Receptionist/addguestdetails.ui \
-    $$PWD/View/Receptionist/addroomreservation.ui \
-    $$PWD/View/Receptionist/checkavailableroom.ui \
-    $$PWD/View/Receptionist/checkout.ui \
-    $$PWD/View/MaintenanceOrHouseKeeping/editroomstatus.ui \
-    $$PWD/View/HR/hr.ui \
-    $$PWD/View/loginscreen.ui \
-    $$PWD/View/Manger/manger.ui \
-    $$PWD/View/Receptionist/receptionist.ui \
-    $$PWD/View/Receptionist/reservehall.ui \
-    $$PWD/View/Receptionist/reserveroom.ui \
-    $$PWD/View/Receptionist/reservetable.ui \
-    $$PWD/View/Receptionist/reservevehicle.ui \
-    $$PWD/View/Receptionist/updatedeleteres.ui
+    View/Receptionist/addguestdetails.ui \
+    View/Receptionist/addroomreservation.ui \
+    View/Receptionist/checkavailableroom.ui \
+    View/Receptionist/checkout.ui \
+    View/MaintenanceOrHouseKeeping/editroomstatus.ui \
+    View/HR/hr.ui \
+    View/loginscreen.ui \
+    View/Manger/manger.ui \
+    View/Receptionist/receptionist.ui \
+    View/Receptionist/reservehall.ui \
+    View/Receptionist/reserveroom.ui \
+    View/Receptionist/reservetable.ui \
+    View/Receptionist/reservevehicle.ui \
+    View/Receptionist/updatedeleteres.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

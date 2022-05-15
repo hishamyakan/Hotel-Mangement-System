@@ -2,17 +2,17 @@
 #include "ui_hr.h"
 #include <QTableWidget>
 #include <QStringList>
+#include <QMessageBox>
 #include "View/loginscreen.h"
 
 #include "Control/hotelSystem.h"
 #include <vector>
-#include<iostream>
-using namespace std;
+
 
 /*These pre procesors are used for determining the col number*/
 
 #define NAME       0
-#define SSN_Index        1
+#define SSN_Index  1
 #define DEPARTMENT 2
 #define SALARY     3
 
@@ -75,9 +75,6 @@ HR::HR(QWidget *parent , int caller) :
 
     for(int i = 0; i <x ; i++)
     {
-
-        cout <<Data[i].name<<endl;
-
         model->setData(model->index(i,NAME),QString::fromStdString(Data[i].name));
 
         model->setData(model->index(i,SSN_Index),QString::fromStdString(Data[i].SSN));
@@ -89,16 +86,7 @@ HR::HR(QWidget *parent , int caller) :
 
     }
 
-
-
-//    model->setData(model->index(0,NAME),"Hisham Yakan");
-//    model->setData(model->index(0,SSN),"30002012100792");
-//    model->setData(model->index(0,DEPARTMENT),"HR");
-//    model->setData(model->index(0,SALARY),"1000");
      ui->tableWidget->sortItems(sortBy);
-
-
-
 
 }
 
@@ -243,5 +231,6 @@ void HR::on_Save_clicked()
     }
     HR_Member newHrMeb;
     newHrMeb.saveEmployeeData(NewSavedData);
+    QMessageBox::information(this,"Saving Data","Data saved to DataBase Successfully");
 }
 

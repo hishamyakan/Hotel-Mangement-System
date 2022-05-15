@@ -14,11 +14,11 @@
 
 vector<Employee> Receptionists = {
 
-        Receptionist_Member("Ahmed Ali",      "674-36-1364" , "Reception" , 2000),
-        Receptionist_Member("Ahmed Assem",    "429-05-7643" , "Reception" , 2000),
-        Receptionist_Member("Farah Dessouki", "485-01-9435" , "Reception" , 2200),
-        Receptionist_Member("Mohamed Rokay",  "008-26-6314" , "Reception" , 2200),
-        Receptionist_Member("Hazem Mostafa",  "102-93-9099" , "Reception" , 2300)
+        Receptionist_Member("Ahmed Ali",      "674-36-1364" , "Receptionist" , 2000),
+        Receptionist_Member("Ahmed Assem",    "429-05-7643" , "Receptionist" , 2000),
+        Receptionist_Member("Farah Dessouki", "485-01-9435" , "Receptionist" , 2200),
+        Receptionist_Member("Mohamed Rokay",  "008-26-6314" , "Receptionist" , 2200),
+        Receptionist_Member("Hazem Mostafa",  "102-93-9099" , "Receptionist" , 2300)
 
 };
 
@@ -42,9 +42,9 @@ vector<Employee> Maintenance_Members= {
 
 vector<Employee> HouseKeepers = {
 
-        HouseKeeper("Bassem Khaled", "234-02-5643" , "House Keeping" , 2000),
-        HouseKeeper("Abdo Moota","435-01-5611" , "House Keeping" , 2000),
-        HouseKeeper("Bahgat Saber",   "576-01-1244" , "House Keeping" , 2200)
+        HouseKeeper("Bassem Khaled", "234-02-5643" , "HouseKeeping" , 2000),
+        HouseKeeper("Abdo Moota","435-01-5611" , "HouseKeeping" , 2000),
+        HouseKeeper("Bahgat Saber",   "576-01-1244" , "HouseKeeping" , 2200)
 
 };
 
