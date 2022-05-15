@@ -37,4 +37,16 @@ typedef enum{
 
 }PaymentMethod;
 
+
+typedef struct{
+
+	int number;
+
+	string type;
+
+	string status;
+
+}ReservableInfo;
+
+
 #endif /* HOTEL_TYPES_H_ */

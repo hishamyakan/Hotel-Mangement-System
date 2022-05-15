@@ -24,6 +24,8 @@ extern vector<vector<Employee>> EmployeeDatabase;
 void saveDatabase(vector<EmployeeInfo> info);
 
 vector<EmployeeInfo> getEmployees();
+
+int totalNumberOfEmployees();
 /*void addEmployee(EmployeeInfo info);*/
 
 

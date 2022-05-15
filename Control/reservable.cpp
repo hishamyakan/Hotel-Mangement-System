@@ -8,8 +8,10 @@
  *
  *******************************************************************************/
 
-#include "Control/reservable.h"
-
+#include "reservable.h"
+#include "Date.h"
+#include <iostream>
+using namespace std;
 
 /******************************************************************************
  *                         Reservable Methods                                 *
@@ -81,8 +83,48 @@ void Room::modifyState(string state){
 
 }
 
+void Room::show(){
+
+	cout<<"Room: "<<this->roomNumber<<endl;
+	cout<<"Type: "<<this->type<<endl;
+	cout<<endl;
+
+}
+
+string Room::getType(){
+
+	switch(type){
+
+	case SINGLE_ROOM:
+
+		return "Single";
+
+	case DOUBLE_ROOM:
+
+		return "Double";
+
+	case ROYAL_SUITE:
+
+		return "Royal Suite";
+	}
+
+	return "Single";
+
+}
 
 
+bool Room::isAvailable(Date d){
+
+	for(auto ptr : this->getReservations()){
+
+		if(d.isBetween(ptr->getStartDate() , ptr->getEndDate()) )
+
+			return false;
+
+	}
+
+	return true;
+}
 /******************************************************************************
  *                            Hall Methods                                    *
  ******************************************************************************/
@@ -95,7 +137,34 @@ Hall::Hall(HallType type){
 	HallNumber = ++id;
 }
 
+void Hall::show(){
 
+	cout<<"Hall: "<<this->HallNumber<<endl;
+	cout<<"Type: "<<this->type<<endl;
+	cout<<endl;
+
+}
+
+string Hall::getType(){
+
+	switch(type){
+
+	case SMALL:
+
+		return "Small";
+
+	case MEDIUM:
+
+		return "Medium";
+
+	case LARGE:
+
+		return "Large";
+	}
+
+	return "Small";
+
+}
 
 /******************************************************************************
  *                           Vehicle Methods                                  *
@@ -149,6 +218,48 @@ void Vehicle::modifyState(string state){
 
 
 
+void Vehicle::show(){
+
+	cout<<"Vehicle: "<<this->vehicleNumber<<endl;
+	cout<<"Type: "<<this->type<<endl;
+	cout<<endl;
+
+}
+
+
+string Vehicle::getType(){
+
+	switch(type){
+
+	case CAR:
+
+		return "Car";
+
+	case BUS:
+
+		return "Bus";
+
+	case LIMO:
+
+		return "Limousine Car";
+	}
+
+	return "Car";
+
+}
+
+bool Vehicle::isAvailable(Date d){
+
+	for(auto ptr : this->getReservations()){
+
+		if(d.isBetween(ptr->getStartDate() , ptr->getEndDate()) )
+
+			return false;
+
+	}
+
+	return true;
+}
 /******************************************************************************
  *                            Table Methods                                   *
  ******************************************************************************/
@@ -160,3 +271,10 @@ Table::Table(){
 
 }
 
+
+void Table::show(){
+
+	cout<<"Table: "<<this->TableNumber<<endl;
+	cout<<endl;
+
+}

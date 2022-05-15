@@ -6,7 +6,7 @@
  */
 
 
-#include "Control/employee_manager.h"
+#include "employee_manager.h"
 
 
 static Employee toEmp(EmployeeInfo info){
@@ -101,4 +101,18 @@ vector<EmployeeInfo> getEmployees(){
 	return result;
 
 
+}
+
+
+int totalNumberOfEmployees(){
+
+	int count = 0 ;
+
+	for(auto record : EmployeeDatabase){
+
+		count+= record.size();
+
+	}
+
+	return count;
 }

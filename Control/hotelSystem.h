@@ -8,14 +8,22 @@
 #ifndef HOTELSYSTEM_H_
 #define HOTELSYSTEM_H_
 
-#include "Control/Date.h"
-#include "Control/person.h"
-#include "Control/guest.h"
-#include "Control/hr_member.h"
-#include "Control/reservable.h"
-#include "Control/reservation.h"
-#include "Control/employee.h"
-#include "Control/employee_manager.h"
-#include "Control/hotel_types.h"
+#include "Date.h"
+
+#include "person.h"
+#include "guest.h"
+#include "hr_member.h"
+#include "maintenance.h"
+
+#include "reservable.h"
+#include "reservation.h"
+#include "employee.h"
+#include "employee_manager.h"
+#include "hotel_types.h"
+#include "reservable_manager.h"
+
+
+
+
 
 #endif /* HOTELSYSTEM_H_ */

@@ -32,6 +32,7 @@ private:
 
 	Date ReservationDate;
 
+	Date EndDate;
 
 public:
 
@@ -53,6 +54,9 @@ public:
 
 	Date getStartDate();
 
+	void setEndDate(Date EndDate);
+
+	Date getEndDate();
 };
 
 
@@ -64,8 +68,6 @@ class Room_Reservation : public Reservation{
 private:
 
 	RoomType type;
-
-	Date EndDate;
 	//int numberOfDays;
 
 public:
@@ -82,9 +84,6 @@ public:
 
 	string getRoomType();
 
-	void setEndDate(Date EndDate);
-
-	Date getEndDate();
 	//int getDuration();
 
 

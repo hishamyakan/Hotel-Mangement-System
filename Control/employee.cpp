@@ -7,7 +7,7 @@
  * Description: Source file for Employee Class.
  *
  *******************************************************************************/
-#include "Control/employee.h"
+#include "employee.h"
 #include <iostream>
 using namespace std;
 

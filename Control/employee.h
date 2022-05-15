@@ -19,27 +19,25 @@ using namespace std;
 
 typedef struct EmployeeInfo{
 
-    string name ;
+	string name ;
 
-    string SSN ;
+	string SSN ;
 
-    string department;
+	string department;
 
-    double salary;
+	double salary;
 
-    EmployeeInfo(string name , string SSN , string department , double salary){
+	EmployeeInfo(string name , string SSN , string department , double salary){
 
-        this->name = name;
+		this->name = name;
 
-        this->SSN = SSN;
+		this->SSN = SSN;
 
-        this->department = department;
+		this->department = department;
 
-        this->salary = salary;
+		this->salary = salary;
 
-    }
-
-
+	}
 
 }EmployeeInfo;
 
@@ -123,13 +121,6 @@ public:
 	HouseKeeper(string name , string SSN, string department , double salary):Employee(name , SSN, department ,  salary){};
 };
 
-
-class Maintenance_Member : public Employee{
-
-public:
-	Maintenance_Member();
-	Maintenance_Member(string name , string SSN, string department , double salary):Employee(name , SSN, department ,  salary){};
-};
 
 
 extern vector<vector<Employee>> EmployeeDatabase;
