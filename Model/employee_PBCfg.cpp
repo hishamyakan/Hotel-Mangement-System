@@ -8,15 +8,17 @@
  *
  *******************************************************************************/
 #include <vector>
+
 #include "employee.h"
+#include "hr_member.h"
 
 vector<Employee> Receptionists = {
 
-		Receptionist("Ahmed Ali",      "674-36-1364" , "Reception" , 2000),
-		Receptionist("Ahmed Assem",    "429-05-7643" , "Reception" , 2000),
-		Receptionist("Farah Dessouki", "485-01-9435" , "Reception" , 2200),
-		Receptionist("Mohamed Rokay",  "008-26-6314" , "Reception" , 2200),
-		Receptionist("Hazem Mostafa",  "102-93-9099" , "Reception" , 2300)
+		Receptionist_Member("Ahmed Ali",      "674-36-1364" , "Reception" , 2000),
+		Receptionist_Member("Ahmed Assem",    "429-05-7643" , "Reception" , 2000),
+		Receptionist_Member("Farah Dessouki", "485-01-9435" , "Reception" , 2200),
+		Receptionist_Member("Mohamed Rokay",  "008-26-6314" , "Reception" , 2200),
+		Receptionist_Member("Hazem Mostafa",  "102-93-9099" , "Reception" , 2300)
 
 };
 

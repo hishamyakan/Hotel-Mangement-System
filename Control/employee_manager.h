@@ -21,7 +21,10 @@ using namespace std;
 
 extern vector<vector<Employee>> EmployeeDatabase;
 
-void addEmployee(EmployeeInfo info);
+void saveDatabase(vector<EmployeeInfo> info);
+
+vector<EmployeeInfo> getEmployees();
+/*void addEmployee(EmployeeInfo info);*/
 
 
 #endif /* EMPLOYEE_MANAGER_H_ */

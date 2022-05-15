@@ -20,10 +20,14 @@
 #define ROYAL_SUITE_OFFSET 300
 
 
-#define CAR_OFFSET  100
-#define BUS_OFFSET  200
-#define LIMO_OFFSET 300
+#define CAR_OFFSET  20
+#define BUS_OFFSET  30
+#define LIMO_OFFSET 40
 
+
+#define SINGLE_ROOM_PRICE_PER_DAY 	500
+#define DOUBLE_ROOM_PRICE_PER_DAY	600
+#define ROYAL_SUITE_PRICE_PER_DAY	700
 /******************************************************************************
  *                        Reservable Class                                    *
  ******************************************************************************/
@@ -56,6 +60,8 @@ class Room : public Reservable{
 private:
 
 	int roomNumber;
+
+	int pricePerDay;
 
 	RoomType type;
 

@@ -45,7 +45,7 @@ static int index(string department){
 	}
 
 }
-void addEmployee(EmployeeInfo info){
+static void addEmployee(EmployeeInfo info){
 
 	//Employee emp(info.name , info.SSN , info.department , info.salary);
 
@@ -54,11 +54,28 @@ void addEmployee(EmployeeInfo info){
 
 }
 
-vector<EmployeeInfo> getEmployees(string department = "All"){
+void saveDatabase(vector<EmployeeInfo> info){
+
+	for(size_t i = 0 ; i < EmployeeDatabase.size() ; i++){
+
+		EmployeeDatabase[i].clear();
+
+	}
+
+	for(auto emp : info){
+
+		addEmployee(emp);
+
+	}
+
+
+}
+
+vector<EmployeeInfo> getEmployees(){
 
 	vector<EmployeeInfo> result;
 
-	if(department == "All"){
+	//if(department == "All"){
 
 
 		for(auto record : EmployeeDatabase){
@@ -69,9 +86,9 @@ vector<EmployeeInfo> getEmployees(string department = "All"){
 			}
 		}
 
-	}
+	//}
 
-	else{
+	/*else{
 
 		vector<Employee> temp =  EmployeeDatabase[index(department)];
 
@@ -80,7 +97,7 @@ vector<EmployeeInfo> getEmployees(string department = "All"){
 		}
 
 	}
-
+*/
 	return result;
 
 

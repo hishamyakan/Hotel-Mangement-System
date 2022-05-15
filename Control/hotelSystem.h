@@ -11,8 +11,13 @@
 #include "Date.h"
 #include "person.h"
 #include "guest.h"
+#include "hr_member.h"
 #include "reservable.h"
 #include "reservation.h"
+#include "employee.h"
+#include "employee_manager.h"
+#include "hotel_types.h"
+
 
 
 

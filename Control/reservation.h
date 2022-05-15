@@ -35,7 +35,7 @@ private:
 
 public:
 
-	Reservation(){}
+	Reservation(){PayMethod = CREDIT;}
 
 	void setGuest(Guest guest);
 

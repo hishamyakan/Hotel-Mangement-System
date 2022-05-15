@@ -17,7 +17,7 @@
 using namespace std;
 
 
-typedef struct {
+typedef struct EmployeeInfo{
 
 	string name ;
 
@@ -26,6 +26,18 @@ typedef struct {
 	string department;
 
 	double salary;
+
+	EmployeeInfo(string name , string SSN , string department , double salary){
+
+		this->name = name;
+
+		this->SSN = SSN;
+
+		this->department = department;
+
+		this->salary = salary;
+
+	}
 
 }EmployeeInfo;
 
@@ -80,19 +92,25 @@ public:
 
 
 
-class Receptionist : public Employee{
+class Receptionist_Member : public Employee{
 
 public:
 
-	Receptionist();
-	Receptionist(string name , string SSN, string department , double salary):Employee(name , SSN, department ,  salary){};
+	Receptionist_Member(){}
+	Receptionist_Member(string name , string SSN, string department , double salary):Employee(name , SSN, department ,  salary){};
+
 };
 
 class Manager : public Employee{
 
 public:
 
-	Manager();
+	Manager(){}
+
+
+	void saveEmployeeData(vector<EmployeeInfo>);
+
+	vector<EmployeeInfo> getEmployeeData();
 
 };
 
@@ -103,13 +121,6 @@ public:
 	HouseKeeper(string name , string SSN, string department , double salary):Employee(name , SSN, department ,  salary){};
 };
 
-class HR_Member : public Employee{
-
-public :
-
-	HR_Member();
-	HR_Member(string name , string SSN, string department , double salary):Employee(name , SSN, department ,  salary){};
-};
 
 class Maintenance_Member : public Employee{
 
