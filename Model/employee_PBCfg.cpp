@@ -12,6 +12,7 @@
 #include "Control/employee.h"
 #include "Control/hr_member.h"
 #include "Control/maintenance.h"
+#include "Control/receptionist.h"
 
 vector<Employee> Receptionists = {
 
