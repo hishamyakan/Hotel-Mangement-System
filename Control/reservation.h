@@ -67,10 +67,12 @@ class Room_Reservation : public Reservation{
 
 private:
 
-	RoomType type;
+
 	//int numberOfDays;
 
 public:
+
+	RoomType type;
 
 	Room_Reservation(){
 		type = SINGLE_ROOM;
@@ -97,9 +99,11 @@ class Vehicle_Reservation : public Reservation{
 
 private:
 
-	VehicleType type;
+
 
 public:
+
+	VehicleType type;
 
 	Vehicle_Reservation(){}
 
@@ -119,9 +123,11 @@ class Hall_Reservation : public Reservation{
 
 private:
 
-	HallType type;
+
 
 public:
+
+	HallType type;
 
 	Hall_Reservation(){}
 
@@ -164,4 +170,7 @@ public:
 
 };
 
+extern vector<Reservation> current_reservations;
+
+extern vector<Reservation> check_outs;
 #endif /* RESERVATION_H_ */

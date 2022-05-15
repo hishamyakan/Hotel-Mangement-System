@@ -306,6 +306,49 @@ vector<ReservableInfo> getVehicles(){
 
 
 
+vector<ReservableInfo> getRooms2(){
+
+	vector<ReservableInfo> result;
+
+	for(auto room :rooms){
+
+		ReservableInfo inf;
+
+		inf.number = room.getNumber();
+
+		inf.type = room.getType();
+
+		inf.status = (room.maintained()&&room.isAvailable())?"Available":"UnAvailable";
+
+		result.push_back(inf);
+	}
+
+	return result;
+
+}
+
+vector<ReservableInfo> getVehicles2(){
+
+	vector<ReservableInfo> result;
+
+	for(auto vehicle :Vehicles){
+
+		ReservableInfo inf;
+
+		inf.number = vehicle.getNumber();
+
+		inf.type = vehicle.getType();
+
+		inf.status = (vehicle.maintained()&&vehicle.isAvailable())?"Available":"UnAvailable";
+
+		result.push_back(inf);
+	}
+
+	return result;
+
+}
+
+
 
 
 void setRoomsStatus(vector<string> status){

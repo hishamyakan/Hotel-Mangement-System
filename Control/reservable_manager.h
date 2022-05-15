@@ -65,6 +65,10 @@ vector<ReservableInfo> getRooms();
 
 vector<ReservableInfo> getVehicles();
 
+vector<ReservableInfo> getRooms2();
+
+vector<ReservableInfo> getVehicles2();
+
 void setRoomsStatus(vector<string> status);
 
 void setVehiclesStatus(vector<string> status);

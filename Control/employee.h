@@ -92,15 +92,6 @@ public:
 
 
 
-class Receptionist_Member : public Employee{
-
-public:
-
-	Receptionist_Member(){}
-	Receptionist_Member(string name , string SSN, string department , double salary):Employee(name , SSN, department ,  salary){};
-
-};
-
 class Manager : public Employee{
 
 public:
