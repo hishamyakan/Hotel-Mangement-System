@@ -17,15 +17,27 @@
 using namespace std;
 
 
-typedef struct {
+typedef struct EmployeeInfo{
 
-	string name ;
+    string name ;
 
-	string SSN ;
+    string SSN ;
 
-	string department;
+    string department;
 
-	double salary;
+    double salary;
+
+    EmployeeInfo(string name , string SSN , string department , double salary){
+
+        this->name = name;
+
+        this->SSN = SSN;
+
+        this->department = department;
+
+        this->salary = salary;
+
+    }
 
 }EmployeeInfo;
 

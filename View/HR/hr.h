@@ -32,6 +32,8 @@ private slots:
 
     void on_Clear_clicked();
 
+    void on_Save_clicked();
+
 private:
     Ui::HR *ui;
 };

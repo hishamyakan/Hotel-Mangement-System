@@ -1,6 +1,6 @@
 #include "manger.h"
 #include "ui_manger.h"
-#include "loginscreen.h"
+#include "View/loginscreen.h"
 #include <QPixmap>
 
 

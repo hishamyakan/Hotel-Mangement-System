@@ -2,7 +2,9 @@
 #include "ui_hr.h"
 #include <QTableWidget>
 #include <QStringList>
-#include "loginscreen.h"
+#include "View/loginscreen.h"
+#include "Control/hotelSystem.h"
+#include <vector>
 
 
 
@@ -189,5 +191,30 @@ void HR::on_Clear_clicked()
     ui->lineEdit_Name->setText(nullptr);
     ui->lineEdit_Salary->setText(nullptr);
     ui->lineEdit_SSN->setText(nullptr);
+}
+
+
+void HR::on_Save_clicked()
+{
+    vector<EmployeeInfo>NewSavedData;
+    auto model = ui->tableWidget->model();
+    for (int i = 0 ; i < ui->tableWidget->rowCount(); i++)
+    {
+        QString data = model->data(model->index(i,NAME)).toString();
+        string name = data.toStdString();
+
+        data = model->data(model->index(i,SALARY)).toString();
+        double salary = data.toDouble();
+
+        data = model->data(model->index(i,SSN)).toString();
+        string ssn = data.toStdString();
+
+
+         data = model->data(model->index(i,DEPARTMENT)).toString();
+         string department = data.toStdString();
+
+         NewSavedData.push_back(EmployeeInfo(name,ssn,department,salary));
+
+    }
 }
 

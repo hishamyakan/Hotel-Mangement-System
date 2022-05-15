@@ -3,10 +3,10 @@
 
 #include <QMainWindow>
 
-#include "receptionist.h"
-#include "hr.h"
-#include "manger.h"
-#include "editroomstatus.h"
+#include "View/Receptionist/receptionist.h"
+#include "View/HR/hr.h"
+#include "View/Manger/manger.h"
+#include "View/MaintenanceOrHouseKeeping/editroomstatus.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginScreen; }
