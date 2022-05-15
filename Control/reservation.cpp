@@ -8,7 +8,7 @@
  *
  *******************************************************************************/
 
-#include "reservation.h"
+#include "Control/reservation.h"
 
 /******************************************************************************
  *                        Reservation Methods                                 *
@@ -188,16 +188,16 @@ void Hall_Reservation::setType(HallType type){
 
 void Hall_Reservation::setType(string type){
 
-	if(type == "Meeting"){
+	if(type == "Small"){
 
-		this->type = MEETING_HALL;
+		this->type = SMALL;
 
 	}
-	else if(type == "Wedding"){
-		this->type = WEDDING_HALL;
+	else if(type == "Large"){
+		this->type = LARGE;
 	}
 	else{
-		this->type = CONFERENCE_HALL;
+		this->type = MEDIUM;
 	}
 
 }
@@ -206,18 +206,18 @@ string Hall_Reservation::getType(){
 
 	switch(type){
 
-	case WEDDING_HALL:
+	case SMALL:
 
-		return "Wedding";
+		return "Small";
 
-	case MEETING_HALL:
+	case MEDIUM:
 
-		return "Meeting";
-	case CONFERENCE_HALL:
+		return "Medium";
+	case LARGE:
 
-		return "Other";
+		return "Large";
 	}
-	return "Other";
+	return "Medium";
 }
 
 /******************************************************************************

@@ -19,7 +19,7 @@ typedef enum{
 
 typedef enum{
 
-	CONFERENCE_HALL , MEETING_HALL, WEDDING_HALL
+	SMALL, MEDIUM , LARGE
 
 }HallType;
 

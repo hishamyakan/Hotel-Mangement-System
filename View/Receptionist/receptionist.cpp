@@ -2,7 +2,7 @@
 #include "ui_receptionist.h"
 
 
-#include "loginscreen.h"
+#include "View/loginscreen.h"
 
 
 

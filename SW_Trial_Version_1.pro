@@ -19,6 +19,7 @@ SOURCES += \
     Control/employee.cpp \
     Control/employee_manager.cpp \
     Control/guest.cpp \
+    Control/hr_member.cpp \
     Control/person.cpp \
     Control/reservable.cpp \
     Control/reservation.cpp \
@@ -54,6 +55,7 @@ HEADERS += \
     Control/guest.h \
     Control/hotelSystem.h \
     Control/hotel_types.h \
+    Control/hr_member.h \
     Control/person.h \
     Control/reservable.h \
     Control/reservation.h

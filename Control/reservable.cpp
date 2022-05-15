@@ -8,7 +8,7 @@
  *
  *******************************************************************************/
 
-#include "reservable.h"
+#include "Control/reservable.h"
 
 
 /******************************************************************************
@@ -47,16 +47,20 @@ Room::Room(RoomType type){
 	case SINGLE_ROOM:
 
 		this->roomNumber = id_generator[type]+SINGLE_ROOM_OFFSET;
+		this->pricePerDay = SINGLE_ROOM_PRICE_PER_DAY;
+
 		break;
 
 	case DOUBLE_ROOM:
 
 		this->roomNumber = id_generator[type]+DOUBLE_ROOM_OFFSET;
+		this->pricePerDay = DOUBLE_ROOM_PRICE_PER_DAY;
 		break;
 
 	case ROYAL_SUITE:
 
 		this->roomNumber = id_generator[type]+ROYAL_SUITE_OFFSET;
+		this->pricePerDay = ROYAL_SUITE_PRICE_PER_DAY;
 		break;
 
 

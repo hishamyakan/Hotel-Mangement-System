@@ -5,13 +5,14 @@
 #include "View/loginscreen.h"
 #include "Control/hotelSystem.h"
 #include <vector>
+#include<iostream>
 
-
+using namespace std;
 
 /*These pre procesors are used for determining the col number*/
 
 #define NAME       0
-#define SSN        1
+#define SSN_Index        1
 #define DEPARTMENT 2
 #define SALARY     3
 
@@ -39,7 +40,13 @@ HR::HR(QWidget *parent , int caller) :
         ui->LogOut->deleteLater();
     }
 
-    ui->tableWidget->setRowCount(1);
+    rowNum = -1;
+    colNum = -1;
+
+    HR_Member newHrMeb;
+    vector<EmployeeInfo>Data = newHrMeb.getEmployeeData();
+    int x = (int)Data.size();
+    ui->tableWidget->setRowCount(x);
     ui->tableWidget->setColumnCount(4);
     ui->tableWidget->horizontalHeader()->setStretchLastSection(true);
 
@@ -66,10 +73,28 @@ HR::HR(QWidget *parent , int caller) :
     auto model = ui->tableWidget->model();
 
 
-    model->setData(model->index(0,NAME),"Hisham Yakan");
-    model->setData(model->index(0,SSN),"30002012100792");
-    model->setData(model->index(0,DEPARTMENT),"HR");
-    model->setData(model->index(0,SALARY),"1000");
+    for(int i = 0; i <x ; i++)
+    {
+
+        cout <<Data[i].name<<endl;
+
+        model->setData(model->index(i,NAME),QString::fromStdString(Data[i].name));
+
+        model->setData(model->index(i,SSN_Index),QString::fromStdString(Data[i].SSN));
+
+        model->setData(model->index(i,DEPARTMENT),QString::fromStdString(Data[i].department));
+        QString temp;
+        temp = QString::number(Data[i].salary);
+        model->setData(model->index(i,SALARY),temp);
+
+    }
+
+
+
+//    model->setData(model->index(0,NAME),"Hisham Yakan");
+//    model->setData(model->index(0,SSN),"30002012100792");
+//    model->setData(model->index(0,DEPARTMENT),"HR");
+//    model->setData(model->index(0,SALARY),"1000");
      ui->tableWidget->sortItems(sortBy);
 
 
@@ -92,7 +117,7 @@ void HR::on_tableWidget_cellActivated(int row, int column)
      data = model->data(model->index(row,SALARY)).toString();
      ui->lineEdit_Salary->setText(data);
 
-     data = model->data(model->index(row,SSN)).toString();
+     data = model->data(model->index(row,SSN_Index)).toString();
      ui->lineEdit_SSN->setText(data);
 
 
@@ -113,7 +138,7 @@ void HR::on_tableWidget_cellClicked(int row, int column)
     data = model->data(model->index(row,SALARY)).toString();
     ui->lineEdit_Salary->setText(data);
 
-    data = model->data(model->index(row,SSN)).toString();
+    data = model->data(model->index(row,SSN_Index)).toString();
     ui->lineEdit_SSN->setText(data);
 
      data = model->data(model->index(row,DEPARTMENT)).toString();
@@ -129,7 +154,7 @@ void HR::on_Update_clicked()
 
     auto model = ui->tableWidget->model();
     model->setData(model->index(rowNum,NAME),ui->lineEdit_Name->text());
-    model->setData(model->index(rowNum,SSN),ui->lineEdit_SSN->text());
+    model->setData(model->index(rowNum,SSN_Index),ui->lineEdit_SSN->text());
     model->setData(model->index(rowNum,DEPARTMENT),ui->comboBox_Dep->currentText());
     model->setData(model->index(rowNum,SALARY),ui->lineEdit_Salary->text());
 
@@ -143,7 +168,7 @@ void HR::on_AddNewEmp_clicked()
     ui->tableWidget->setRowCount(ui->tableWidget->rowCount()+1);
     auto model = ui->tableWidget->model();
     model->setData(model->index(ui->tableWidget->rowCount()-1,NAME),ui->lineEdit_Name->text());
-    model->setData(model->index(ui->tableWidget->rowCount()-1,SSN),ui->lineEdit_SSN->text());
+    model->setData(model->index(ui->tableWidget->rowCount()-1,SSN_Index),ui->lineEdit_SSN->text());
     model->setData(model->index(ui->tableWidget->rowCount()-1,DEPARTMENT),ui->comboBox_Dep->currentText());
     model->setData(model->index(ui->tableWidget->rowCount()-1,SALARY),ui->lineEdit_Salary->text());
      ui->tableWidget->sortItems(sortBy);
@@ -206,7 +231,7 @@ void HR::on_Save_clicked()
         data = model->data(model->index(i,SALARY)).toString();
         double salary = data.toDouble();
 
-        data = model->data(model->index(i,SSN)).toString();
+        data = model->data(model->index(i,SSN_Index)).toString();
         string ssn = data.toStdString();
 
 
@@ -216,5 +241,7 @@ void HR::on_Save_clicked()
          NewSavedData.push_back(EmployeeInfo(name,ssn,department,salary));
 
     }
+    HR_Member newHrMeb;
+    newHrMeb.saveEmployeeData(NewSavedData);
 }
 
