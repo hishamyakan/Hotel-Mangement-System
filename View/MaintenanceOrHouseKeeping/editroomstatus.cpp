@@ -1,7 +1,7 @@
 #include "editroomstatus.h"
 #include "ui_editroomstatus.h"
 
-#include "loginscreen.h"
+#include "View/loginscreen.h"
 
 
 #define No     0
