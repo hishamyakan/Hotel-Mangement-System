@@ -28,6 +28,12 @@ private slots:
 
     void on_Update_clicked();
 
+    void on_UpdateRooms_clicked();
+
+    void on_Save_clicked();
+
+    void on_UpdateVehicle_clicked();
+
 private:
     Ui::EditRoomStatus *ui;
 };

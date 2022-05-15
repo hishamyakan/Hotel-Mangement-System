@@ -11,8 +11,8 @@
 #ifndef RESERVATION_H_
 #define RESERVATION_H_
 
-#include "guest.h"
-#include "hotel_types.h"
+#include "Control/guest.h"
+#include "Control/hotel_types.h"
 #include <vector>
 
 using namespace std;

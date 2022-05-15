@@ -1,4 +1,4 @@
-#include "loginscreen.h"
+#include "View/loginscreen.h"
 #include "ui_loginscreen.h"
 #include <QPixmap>
 #include <QMessageBox>

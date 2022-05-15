@@ -2,6 +2,10 @@
 #include "ui_editroomstatus.h"
 
 #include "View/loginscreen.h"
+#include "Control/hotelSystem.h"
+
+#include <vector>
+#include <string>
 
 
 #define No     0
@@ -14,6 +18,11 @@
 int ncol, nrow;
 
 bool edit = true;
+
+int numberOfRooms = 0;
+int numberOfVehicle = 0;
+
+bool roomIsPressed = true;
 
 EditRoomStatus::EditRoomStatus(QWidget *parent, int caller) :
     QMainWindow(parent),
@@ -53,13 +62,13 @@ EditRoomStatus::EditRoomStatus(QWidget *parent, int caller) :
         ui->editVehicle->setEnabled(false);
     }
 
-
-    ui->lineEdit->setText("30");
-    ui->lineEdit_2->setText("20");
-    ui->lineEdit_3->setText("10");
-    ui->lineEdit_4->setText("10");
-    ui->lineEdit_5->setText("3");
-    ui->lineEdit_6->setText("4");
+    vector<int>count = MaintenanceCounts();
+    ui->lineEdit->setText(QString::number(count[0]));
+    ui->lineEdit_2->setText(QString::number(count[1]));
+    ui->lineEdit_3->setText(QString::number(count[2]));
+    ui->lineEdit_4->setText(QString::number(count[3]));
+    ui->lineEdit_5->setText(QString::number(count[4]));
+    ui->lineEdit_6->setText(QString::number(count[5]));
 
 
 
@@ -74,16 +83,23 @@ EditRoomStatus::~EditRoomStatus()
 
 void EditRoomStatus::on_editRoom_clicked()
 {
+    roomIsPressed = true;
     QStringList tableHeader = {"Room Number","Room Type", "Room Status"};
     ui->Reservable->setHorizontalHeaderLabels(tableHeader);
     edit = true;
 
-    ui->Reservable->setRowCount(1);
+    ui->Reservable->setRowCount(NUMBER_OF_SINGLE_ROOMS+NUMBER_OF_DOUBLE_ROOMS+NUMBER_OF_ROYAL_SUITES);
     auto model = ui->Reservable->model();
-    model->setData(model->index(0,No),"1");
-    model->setData(model->index(0,Type),"single");
-    model->setData(model->index(0,Status),"UnAvailable");
+    vector<ReservableInfo>info = getRooms();
+    numberOfRooms = (int)info.size();
 
+    for(int i = 0 ; i<numberOfRooms; i++)
+    {
+            model->setData(model->index(i,No),info[i].number);
+            model->setData(model->index(i,Type),QString::fromStdString(info[i].type));
+            model->setData(model->index(i,Status),QString::fromStdString(info[i].status));
+
+    }
 
 
 }
@@ -137,9 +153,23 @@ void EditRoomStatus::on_Reservable_cellClicked(int row, int column)
 
 void EditRoomStatus::on_editVehicle_clicked()
 {
+    roomIsPressed = false;
     QStringList tableHeader = {"Vehicle Number","Vehicle Type" ,"Vehicle Status"};
     ui->Reservable->setHorizontalHeaderLabels(tableHeader);
     edit = false;
+
+    ui->Reservable->setRowCount(NUMBER_OF_CARS+NUMBER_OF_BUSSES+NUMBER_OF_LIMOS);
+    auto model = ui->Reservable->model();
+    vector<ReservableInfo>info = getVehicles();
+    numberOfVehicle = (int)info.size();
+
+    for(int i = 0 ; i<numberOfVehicle; i++)
+    {
+            model->setData(model->index(i,No),info[i].number);
+            model->setData(model->index(i,Type),QString::fromStdString(info[i].type));
+            model->setData(model->index(i,Status),QString::fromStdString(info[i].status));
+
+    }
 
 
 
@@ -158,5 +188,62 @@ void EditRoomStatus::on_LogOut_clicked()
 void EditRoomStatus::on_Update_clicked()
 {
 
+}
+
+
+void EditRoomStatus::on_UpdateRooms_clicked()
+{
+    auto model = ui->Reservable->model();
+    model->setData(model->index(nrow,Status),ui->comboBox_RoomStatus->currentText());
+
+}
+
+
+void EditRoomStatus::on_Save_clicked()
+{
+    vector<string>statusCollected ;
+     auto model = ui->Reservable->model();
+
+    if(true == roomIsPressed)
+    {
+        for(int row = 0; row<numberOfRooms; row++)
+        {
+
+            statusCollected.push_back( model->data(model->index(row,Status)).toString().toStdString());
+        }
+
+        Maintenance_Member member;
+        member.setRoomsAvailability(statusCollected);
+    }
+
+    else
+    {
+        for(int row = 0; row<numberOfVehicle; row++)
+        {
+
+            statusCollected.push_back( model->data(model->index(row,Status)).toString().toStdString());
+        }
+
+        Maintenance_Member member;
+        member.setVehiclesAvailability(statusCollected);
+    }
+
+
+    vector<int>count = MaintenanceCounts();
+    ui->lineEdit->setText(QString::number(count[0]));
+    ui->lineEdit_2->setText(QString::number(count[1]));
+    ui->lineEdit_3->setText(QString::number(count[2]));
+    ui->lineEdit_4->setText(QString::number(count[3]));
+    ui->lineEdit_5->setText(QString::number(count[4]));
+    ui->lineEdit_6->setText(QString::number(count[5]));
+
+
+}
+
+
+void EditRoomStatus::on_UpdateVehicle_clicked()
+{
+    auto model = ui->Reservable->model();
+    model->setData(model->index(nrow,Status),ui->comboBox_VehicleStatus->currentText());
 }
 

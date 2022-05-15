@@ -8,7 +8,7 @@
 #ifndef HOTEL_TYPES_H_
 #define HOTEL_TYPES_H_
 
-#include "Date.h"
+#include "Control/Date.h"
 
 
 typedef enum{

@@ -8,7 +8,7 @@
 #ifndef HOTELSYSTEM_H_
 #define HOTELSYSTEM_H_
 
-#include "Date.h"
+#include "Control/Date.h"
 
 #include "person.h"
 #include "guest.h"

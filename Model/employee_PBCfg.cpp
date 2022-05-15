@@ -9,9 +9,9 @@
  *******************************************************************************/
 #include <vector>
 
-#include "employee.h"
-#include "hr_member.h"
-#include "maintenance.h"
+#include "Control/employee.h"
+#include "Control/hr_member.h"
+#include "Control/maintenance.h"
 
 vector<Employee> Receptionists = {
 
