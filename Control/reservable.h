@@ -12,7 +12,7 @@
 #define RESERVABLE_H_
 
 #include "reservation.h"
-#include "hotel_types.h"
+#include "Control/hotel_types.h"
 
 #define SINGLE_ROOM_OFFSET 			100
 #define DOUBLE_ROOM_OFFSET 			200

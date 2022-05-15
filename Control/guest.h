@@ -10,7 +10,7 @@
 #ifndef GUEST_H_
 #define GUEST_H_
 
-#include "person.h"
+#include "Control/person.h"
 #include <vector>
 
 

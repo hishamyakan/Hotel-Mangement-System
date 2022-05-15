@@ -9,8 +9,8 @@
 #define RESERVABLE_MANAGER_H_
 
 
-#include "reservable.h"
-#include "hotel_types.h"
+#include "Control/reservable.h"
+#include "Control/hotel_types.h"
 
 #define NUMBER_OF_SINGLE_ROOMS		30
 #define NUMBER_OF_DOUBLE_ROOMS		20

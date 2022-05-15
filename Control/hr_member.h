@@ -8,7 +8,7 @@
 #ifndef HR_MEMBER_H_
 #define HR_MEMBER_H_
 
-#include "employee.h"
+#include "Control/employee.h"
 
 class HR_Member : public Employee{
 

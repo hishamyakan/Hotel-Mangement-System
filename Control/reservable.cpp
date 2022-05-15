@@ -8,8 +8,8 @@
  *
  *******************************************************************************/
 
-#include "reservable.h"
-#include "Date.h"
+#include "Control/reservable.h"
+#include "Control/Date.h"
 #include <iostream>
 using namespace std;
 

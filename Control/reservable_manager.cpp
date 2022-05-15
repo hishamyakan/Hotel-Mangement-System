@@ -6,8 +6,8 @@
  */
 
 
-#include "reservable_manager.h"
-#include "Reservable.h"
+#include "Control/reservable_manager.h"
+#include "Control/reservable.h"
 #include <iostream>
 using namespace std;
 

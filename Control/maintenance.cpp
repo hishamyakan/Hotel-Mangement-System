@@ -5,8 +5,8 @@
  *      Author: User
  */
 
-#include "reservable_manager.h"
-#include "maintenance.h"
+#include "Control/reservable_manager.h"
+#include "Control/maintenance.h"
 
 void Maintenance_Member::setRoomsAvailability(vector<string> status){
 

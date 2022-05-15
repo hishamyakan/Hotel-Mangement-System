@@ -8,13 +8,13 @@
 #ifndef MAINTENANCE_H_
 #define MAINTENANCE_H_
 
-#include "employee.h"
+#include "Control/employee.h"
 
 
 class Maintenance_Member : public Employee{
 
 public:
-	Maintenance_Member();
+    Maintenance_Member(){};
 	Maintenance_Member(string name , string SSN, string department , double salary):Employee(name , SSN, department ,  salary){};
 
 	void setRoomsAvailability(vector<string>);

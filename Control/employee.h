@@ -13,7 +13,7 @@
 
 #include <string>
 #include <vector>
-#include "person.h"
+#include "Control/person.h"
 using namespace std;
 
 

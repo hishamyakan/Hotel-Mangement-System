@@ -8,7 +8,7 @@
  *
  *******************************************************************************/
 
-#include "person.h"
+#include "Control/person.h"
 #include <iostream>
 
 /*
