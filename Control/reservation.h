@@ -24,39 +24,39 @@ class Reservation{
 
 private:
 
-	Guest guest;
+    Guest guest;
 
-	vector<GuestInfo> extraGuests;
+    vector<GuestInfo> extraGuests;
 
-	PaymentMethod PayMethod;
+    PaymentMethod PayMethod;
 
-	Date ReservationDate;
+    Date ReservationDate;
 
-	Date EndDate;
+    Date EndDate;
 
 public:
 
-	Reservation(){PayMethod = CREDIT;}
+    Reservation(){PayMethod = CREDIT;}
 
-	void setGuest(Guest guest);
+    void setGuest(Guest guest);
 
-	void setExtraGuests(vector<GuestInfo> extraGuests);
+    void setExtraGuests(vector<GuestInfo> extraGuests);
 
-	void setPaymentMethod(PaymentMethod PayMethod);
+    void setPaymentMethod(PaymentMethod PayMethod);
 
-	void setStartDate(Date ReservationDate);
+    void setStartDate(Date ReservationDate);
 
-	Guest getGuest();
+    Guest getGuest();
 
-	vector<GuestInfo> getExtraGuests();
+    vector<GuestInfo> getExtraGuests();
 
-	PaymentMethod getPaymentMethod();
+    PaymentMethod getPaymentMethod();
 
-	Date getStartDate();
+    Date getStartDate();
 
-	void setEndDate(Date EndDate);
+    void setEndDate(Date EndDate);
 
-	Date getEndDate();
+    Date getEndDate();
 };
 
 
@@ -68,25 +68,25 @@ class Room_Reservation : public Reservation{
 private:
 
 
-	//int numberOfDays;
+    //int numberOfDays;
 
 public:
 
-	RoomType type;
+    RoomType type;
 
-	Room_Reservation(){
-		type = SINGLE_ROOM;
-	}
+    Room_Reservation(){
+        type = SINGLE_ROOM;
+    }
 
-	void setRoomType(RoomType type);
+    void setRoomType(RoomType type);
 
-	void setRoomType(string type);
+    void setRoomType(string type);
 
-	//void setDuration(int days);
+    //void setDuration(int days);
 
-	string getRoomType();
+    string getRoomType();
 
-	//int getDuration();
+    //int getDuration();
 
 
 
@@ -103,15 +103,15 @@ private:
 
 public:
 
-	VehicleType type;
+    VehicleType type;
 
-	Vehicle_Reservation(){}
+    Vehicle_Reservation(){}
 
-	void setType(VehicleType type);
+    void setType(VehicleType type);
 
-	void setType(string type);
+    void setType(string type);
 
-	string getType();
+    string getType();
 
 };
 
@@ -127,15 +127,15 @@ private:
 
 public:
 
-	HallType type;
+    HallType type;
 
-	Hall_Reservation(){}
+    Hall_Reservation(){}
 
-	void setType(HallType type);
+    void setType(HallType type);
 
-	void setType(string type);
+    void setType(string type);
 
-	string getType();
+    string getType();
 
 };
 
@@ -146,31 +146,36 @@ class Table_Reservation : public Reservation{
 
 private:
 
-	Time ReservationTime;
+    Time ReservationTime;
 
-	int duration;
+    int duration;
 
-	Time EndTime;
+    Time EndTime;
 
 public:
 
-	Table_Reservation(){}
+    Table_Reservation(){}
 
-	void setReservationTime(Time);
+    void setReservationTime(Time);
 
-	void setDuration(int duration);
+    void setDuration(int duration);
 
-	void setEndTime(Time);
+    void setEndTime(Time);
 
-	Time getReservationTime();
+    Time getReservationTime();
 
-	Time getEndTime();
+    Time getEndTime();
 
-	int getDuration();
+    int getDuration();
 
 };
 
-extern vector<Reservation> current_reservations;
+extern vector<Room_Reservation> current_room_reservations;
+extern vector<Hall_Reservation> current_hall_reservations;
+extern vector<Vehicle_Reservation> current_vehicle_reservations;
+extern vector<Table_Reservation> current_table_reservations;
 
 extern vector<Reservation> check_outs;
+
 #endif /* RESERVATION_H_ */
+

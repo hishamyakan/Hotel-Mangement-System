@@ -370,3 +370,119 @@ void setVehiclesStatus(vector<string> status){
 	}
 
 }
+
+vector<Guest_ReservationsInfo> getGuestReservations(string SSN){
+
+    vector<Guest_ReservationsInfo> result;
+
+    /*Get his room reservations: */
+
+    for(size_t i = 0 ; i < current_room_reservations.size() ; i++){
+
+
+        if(current_room_reservations[i].getGuest().getSSN() == SSN){
+
+            Guest_ReservationsInfo info;
+
+            info.reservation_ptr = &current_room_reservations[i];
+
+            info.type =  current_room_reservations[i].getRoomType();
+
+            info.reservationDate = current_room_reservations[i].getStartDate();
+
+            result.push_back(info);
+        }
+
+    }
+
+    /*Get his Vehicle reservations: */
+    for(size_t i = 0 ; i < current_vehicle_reservations.size() ; i++){
+
+
+        if(current_vehicle_reservations[i].getGuest().getSSN() == SSN){
+
+            Guest_ReservationsInfo info;
+
+            info.reservation_ptr = &current_vehicle_reservations[i];
+
+            info.type =  current_vehicle_reservations[i].getType();
+
+            info.reservationDate = current_vehicle_reservations[i].getStartDate();
+
+            result.push_back(info);
+        }
+
+    }
+
+    /*Get his Hall reservations: */
+    for(size_t i = 0 ; i < current_hall_reservations.size() ; i++){
+
+
+        if(current_hall_reservations[i].getGuest().getSSN() == SSN){
+
+            Guest_ReservationsInfo info;
+
+            info.reservation_ptr = &current_hall_reservations[i];
+
+            info.type =  current_hall_reservations[i].getType()+" Hall";
+
+            info.reservationDate = current_hall_reservations[i].getStartDate();
+
+            result.push_back(info);
+        }
+
+    }
+
+    /*Get his Table reservations: */
+    for(size_t i = 0 ; i < current_table_reservations.size() ; i++){
+
+
+        if(current_table_reservations[i].getGuest().getSSN() == SSN){
+
+            Guest_ReservationsInfo info;
+
+            info.reservation_ptr = &current_table_reservations[i];
+
+            info.type =  "Table";
+
+            info.reservationDate = current_table_reservations[i].getStartDate();
+
+            result.push_back(info);
+        }
+
+    }
+
+    return result;
+
+}
+
+
+void removeNulls(){
+
+
+    for(size_t i = 0 ; i < rooms.size() ; i++){
+
+        rooms[i].deleteReservation(NULL);
+
+    }
+
+    for(size_t i = 0 ; i < Halls.size() ; i++){
+
+        Halls[i].deleteReservation(NULL);
+
+    }
+
+    for(size_t i = 0 ; i < Vehicles.size() ; i++){
+
+        Vehicles[i].deleteReservation(NULL);
+
+    }
+
+    for(size_t i = 0 ; i < Tables.size() ; i++){
+
+        Tables[i].deleteReservation(NULL);
+
+    }
+
+
+}

@@ -14,17 +14,21 @@ class Receptionist_Member : public Employee{
 
 public:
 
-	Receptionist_Member(){}
+    Receptionist_Member(){}
 
-	Receptionist_Member(string name , string SSN, string department , double salary):Employee(name , SSN, department ,  salary){};
+    Receptionist_Member(string name , string SSN, string department , double salary):Employee(name , SSN, department ,  salary){};
 
-	bool reserveRoom(Room_Reservation);
+    bool reserveRoom(Room_Reservation);
 
-	bool reserveHall(Hall_Reservation);
+    bool reserveHall(Hall_Reservation);
 
-	bool reserveVehicle(Vehicle_Reservation);
+    bool reserveVehicle(Vehicle_Reservation);
 
-	bool reserveTable(Table_Reservation);
+    bool reserveTable(Table_Reservation);
+
+    void deleteReservation(string SSN);
+
+    long long getPayment(string SSN);
 
 
 };

@@ -12,21 +12,40 @@
 #include "Control/Date.h"
 #include <iostream>
 using namespace std;
-
 /******************************************************************************
  *                         Reservable Methods                                 *
  ******************************************************************************/
 
 vector<Reservation *> Reservable::getReservations(){
 
-	return this->reservations;
+    return this->reservations;
 
 }
 
 void Reservable::addReservation(Reservation * res){
 
-	if(res != NULL)
-		this->reservations.push_back(res);
+    if(res != NULL)
+        this->reservations.push_back(res);
+
+}
+
+void Reservable::deleteReservation(Reservation * res){
+
+    vector<Reservation *> new_vec;
+
+    for(auto reservation_ptr : this->getReservations()){
+
+        if(res == reservation_ptr){
+            continue;
+        }
+
+        new_vec.push_back(reservation_ptr);
+
+
+
+    }
+
+    this->reservations = new_vec;
 
 }
 
@@ -36,133 +55,134 @@ void Reservable::addReservation(Reservation * res){
 
 Room::Room(RoomType type){
 
-	static int id_generator[3] = {0,0,0};
+    static int id_generator[3] = {0,0,0};
 
-	id_generator[type]++;
+    id_generator[type]++;
 
-	this->type = type;
+    this->type = type;
 
-	isMaintained = true;
+    isMaintained = true;
 
-	switch(type){
+    switch(type){
 
-	case SINGLE_ROOM:
+    case SINGLE_ROOM:
 
-		this->roomNumber = id_generator[type]+SINGLE_ROOM_OFFSET;
-		this->pricePerDay = SINGLE_ROOM_PRICE_PER_DAY;
+        this->roomNumber = id_generator[type]+SINGLE_ROOM_OFFSET;
+        this->pricePerDay = SINGLE_ROOM_PRICE_PER_DAY;
 
-		break;
+        break;
 
-	case DOUBLE_ROOM:
+    case DOUBLE_ROOM:
 
-		this->roomNumber = id_generator[type]+DOUBLE_ROOM_OFFSET;
-		this->pricePerDay = DOUBLE_ROOM_PRICE_PER_DAY;
-		break;
+        this->roomNumber = id_generator[type]+DOUBLE_ROOM_OFFSET;
+        this->pricePerDay = DOUBLE_ROOM_PRICE_PER_DAY;
+        break;
 
-	case ROYAL_SUITE:
+    case ROYAL_SUITE:
 
-		this->roomNumber = id_generator[type]+ROYAL_SUITE_OFFSET;
-		this->pricePerDay = ROYAL_SUITE_PRICE_PER_DAY;
-		break;
+        this->roomNumber = id_generator[type]+ROYAL_SUITE_OFFSET;
+        this->pricePerDay = ROYAL_SUITE_PRICE_PER_DAY;
+        break;
 
 
-	}
+    }
 
 
 }
 
 void Room::modifyState(string state){
 
-	if(state == "Available"){
+    if(state == "Available"){
 
-		this->isMaintained = true;
+        this->isMaintained = true;
 
-	}
+    }
 
-	else this->isMaintained = false;
+    else this->isMaintained = false;
 
 }
 
 void Room::show(){
 
-	cout<<"Room: "<<this->roomNumber<<endl;
-	cout<<"Type: "<<this->type<<endl;
-	cout<<endl;
+    cout<<"Room: "<<this->roomNumber<<endl;
+    cout<<"Type: "<<this->type<<endl;
+    cout<<endl;
 
 }
 
 string Room::getType(){
 
-	switch(type){
+    switch(type){
 
-	case SINGLE_ROOM:
+    case SINGLE_ROOM:
 
-		return "Single";
+        return "Single";
 
-	case DOUBLE_ROOM:
+    case DOUBLE_ROOM:
 
-		return "Double";
+        return "Double";
 
-	case ROYAL_SUITE:
+    case ROYAL_SUITE:
 
-		return "Royal Suite";
-	}
+        return "Royal Suite";
+    }
 
-	return "Single";
+    return "Single";
 
 }
 
 
 bool Room::isAvailable(Date d){
 
-	for(auto ptr : this->getReservations()){
+    for(auto ptr : this->getReservations()){
 
-		if(d.isBetween(ptr->getStartDate() , ptr->getEndDate()) )
 
-			return false;
+        if(d.isBetween(ptr->getStartDate() , ptr->getEndDate()) )
 
-	}
+            return false;
 
-	return true;
+    }
+
+    return true;
 }
 /******************************************************************************
  *                            Hall Methods                                    *
  ******************************************************************************/
 Hall::Hall(HallType type){
 
-	static int id = 0;
+    static int id = 0;
 
-	this->type = type;
+    this->type = type;
 
-	HallNumber = ++id;
+    HallNumber = ++id;
 }
 
 void Hall::show(){
 
-	cout<<"Hall: "<<this->HallNumber<<endl;
-	cout<<"Type: "<<this->type<<endl;
-	cout<<endl;
+    cout<<"Hall: "<<this->HallNumber<<endl;
+    cout<<"Type: "<<this->type<<endl;
+    cout<<endl;
 
 }
 
 string Hall::getType(){
 
-	switch(type){
+    switch(type){
 
-	case SMALL:
+    case SMALL:
 
-		return "Small";
+        return "Small";
 
-	case MEDIUM:
+    case MEDIUM:
 
-		return "Medium";
+        return "Medium";
 
-	case LARGE:
+    case LARGE:
 
-		return "Large";
-	}
+        return "Large";
+    }
 
-	return "Small";
+    return "Small";
 
 }
 
@@ -172,33 +192,33 @@ string Hall::getType(){
 
 Vehicle::Vehicle(VehicleType type){
 
-	static int id_generator[3] = {0,0,0};
+    static int id_generator[3] = {0,0,0};
 
-	id_generator[type]++;
+    id_generator[type]++;
 
-	this->type = type;
+    this->type = type;
 
-	isMaintained = true;
+    isMaintained = true;
 
-	switch(type){
+    switch(type){
 
-	case CAR:
+    case CAR:
 
-		this->vehicleNumber = id_generator[type]+CAR_OFFSET;
-		break;
+        this->vehicleNumber = id_generator[type]+CAR_OFFSET;
+        break;
 
-	case BUS:
+    case BUS:
 
-		this->vehicleNumber = id_generator[type]+BUS_OFFSET;
-		break;
+        this->vehicleNumber = id_generator[type]+BUS_OFFSET;
+        break;
 
-	case LIMO:
+    case LIMO:
 
-		this->vehicleNumber = id_generator[type]+LIMO_OFFSET;
-		break;
+        this->vehicleNumber = id_generator[type]+LIMO_OFFSET;
+        break;
 
 
-	}
+    }
 
 
 
@@ -206,13 +226,13 @@ Vehicle::Vehicle(VehicleType type){
 
 void Vehicle::modifyState(string state){
 
-	if(state == "Available"){
+    if(state == "Available"){
 
-		this->isMaintained = true;
+        this->isMaintained = true;
 
-	}
+    }
 
-	else this->isMaintained = false;
+    else this->isMaintained = false;
 
 }
 
@@ -220,61 +240,61 @@ void Vehicle::modifyState(string state){
 
 void Vehicle::show(){
 
-	cout<<"Vehicle: "<<this->vehicleNumber<<endl;
-	cout<<"Type: "<<this->type<<endl;
-	cout<<endl;
+    cout<<"Vehicle: "<<this->vehicleNumber<<endl;
+    cout<<"Type: "<<this->type<<endl;
+    cout<<endl;
 
 }
 
 
 string Vehicle::getType(){
 
-	switch(type){
+    switch(type){
 
-	case CAR:
+    case CAR:
 
-		return "Car";
+        return "Car";
 
-	case BUS:
+    case BUS:
 
-		return "Bus";
+        return "Bus";
 
-	case LIMO:
+    case LIMO:
 
-		return "Limousine Car";
-	}
+        return "Limousine Car";
+    }
 
-	return "Car";
+    return "Car";
 
 }
 
 bool Vehicle::isAvailable(Date d){
 
-	for(auto ptr : this->getReservations()){
+    for(auto ptr : this->getReservations()){
 
-		if(d.isBetween(ptr->getStartDate() , ptr->getEndDate()) )
+        if(d.isEqualTo(ptr->getStartDate() ))
 
-			return false;
+            return false;
 
-	}
+    }
 
-	return true;
+    return true;
 }
 /******************************************************************************
  *                            Table Methods                                   *
  ******************************************************************************/
 Table::Table(){
 
-	static int id = 0 ;
+    static int id = 0 ;
 
-	TableNumber = ++id;
+    TableNumber = ++id;
 
 }
 
 
 void Table::show(){
 
-	cout<<"Table: "<<this->TableNumber<<endl;
-	cout<<endl;
+    cout<<"Table: "<<this->TableNumber<<endl;
+    cout<<endl;
 
 }

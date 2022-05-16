@@ -1,11 +1,15 @@
 #include "reservevehicle.h"
 #include "ui_reservevehicle.h"
+#include "Control/guest.h"
+#include "Control/reservation.h"
+#include "Control/Date.h"
+
 #include <string>
 #include<QMessageBox>
 #include<QDate>
 
 using namespace std;
-
+//Guest VGuest;
 
 ReserveVehicle::ReserveVehicle(QWidget *parent) :
     QMainWindow(parent),
@@ -31,10 +35,15 @@ ReserveVehicle::~ReserveVehicle()
 
 void ReserveVehicle::on_Reserve_clicked()
 {
-     string name = ui->lineEdit_Name->text().toStdString();
-     string roomNumber = ui->lineEdit_RoomNumber->text().toStdString();
-     string vType = ui->vType->currentText().toStdString();
-     QDate resDate =  ui->dateEdit_vDate->date();
+
+
+//     string name = ui->lineEdit_Name->text().toStdString();
+//     string ssn = ui->lineEdit_SSN->text().toStdString();
+//     string vType = ui->vType->currentText().toStdString();
+//     QDate resDate =  ui->dateEdit_vDate->date();
+//     VGuest.setName(name);
+//     VGuest.setSSN(ssn);
+
 
 
 

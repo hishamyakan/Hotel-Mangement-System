@@ -2,6 +2,7 @@
 #define RESERVEROOM_H
 
 #include <QMainWindow>
+#include "Control/guest.h"
 
 
 namespace Ui {
@@ -21,8 +22,13 @@ private slots:
 
     void on_AddReservation_clicked();
 
+    void on_Submit_clicked();
+
+    void on_AddNewGuest_clicked();
+
 private:
     Ui::ReserveRoom *ui;
+    //Guest newGuest;
 };
 
 #endif // RESERVEROOM_H

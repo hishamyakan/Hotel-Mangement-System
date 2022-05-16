@@ -36,21 +36,23 @@ class Reservable{
 
 private:
 
-	vector<Reservation *> reservations;
+    vector<Reservation *> reservations;
 
 public:
 
-	Reservable(){}
+    Reservable(){reservations = vector<Reservation*>();}
 
-	//Reservable(){}
+    //Reservable(){}
 
-	vector<Reservation *> getReservations();
+    vector<Reservation *> getReservations();
 
-	void addReservation(Reservation *);
+    void addReservation(Reservation *);
 
-	virtual void show(){};
+    void deleteReservation(Reservation *);
 
-	virtual ~Reservable(){};
+    virtual void show(){};
+
+    virtual ~Reservable(){};
 };
 
 
@@ -62,29 +64,29 @@ class Room : public Reservable{
 
 private:
 
-	int roomNumber;
+    int roomNumber;
 
-	int pricePerDay;
+    int pricePerDay;
 
-	bool isMaintained;
+    bool isMaintained;
 
 public:
 
-	RoomType type;
+    RoomType type;
 
-	Room(RoomType type);
+    Room(RoomType type);
 
-	void modifyState(string state);
+    void modifyState(string state);
 
-	bool maintained(){return isMaintained;}
+    bool maintained(){return isMaintained;}
 
-	string getType();
+    string getType();
 
-	int getNumber(){return roomNumber;}
+    int getNumber(){return roomNumber;}
 
-	bool isAvailable(Date date = TodayDate);
+    bool isAvailable(Date date = TodayDate);
 
-	void show();
+    void show();
 };
 
 
@@ -96,17 +98,17 @@ class Hall : public Reservable{
 
 private:
 
-	int HallNumber;
+    int HallNumber;
 
 public:
 
-	HallType type;
+    HallType type;
 
-	Hall(HallType  type);
+    Hall(HallType  type);
 
-	string getType();
+    string getType();
 
-	void show();
+    void show();
 
 };
 
@@ -119,27 +121,27 @@ class Vehicle : public Reservable{
 
 private:
 
-	int vehicleNumber;
+    int vehicleNumber;
 
-	bool isMaintained;
+    bool isMaintained;
 
 public:
 
-	VehicleType type;
+    VehicleType type;
 
-	Vehicle(VehicleType type);
+    Vehicle(VehicleType type);
 
-	bool maintained(){return isMaintained;}
+    bool maintained(){return isMaintained;}
 
-	void modifyState(string state);
+    void modifyState(string state);
 
-	int getNumber(){return vehicleNumber;}
+    int getNumber(){return vehicleNumber;}
 
-	bool isAvailable(Date date = TodayDate);
+    bool isAvailable(Date date = TodayDate);
 
-	string getType();
+    string getType();
 
-	void show();
+    void show();
 
 };
 
@@ -151,12 +153,12 @@ public:
 
 class Table : public Reservable{
 
-	int TableNumber;
+    int TableNumber;
 
 public:
-	Table();
+    Table();
 
-	void show();
+    void show();
 
 };
 

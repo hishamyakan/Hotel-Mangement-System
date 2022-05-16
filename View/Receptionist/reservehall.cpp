@@ -75,7 +75,7 @@ void ReserveHall::on_Reserve_clicked()
 
 
     QMessageBox::information(this,"Hall Reserrvation","Hall was reserved successfully");
-    QMessageBox::information(this,"Unfortunately","Unfortunately No halls are available during this date");
+    QMessageBox::information(this,"Warning","Unfortunately No halls are available during this date");
 
 }
 

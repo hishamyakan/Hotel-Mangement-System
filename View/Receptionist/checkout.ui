@@ -360,17 +360,60 @@
      <item>
       <widget class="QGroupBox" name="groupBox">
        <property name="title">
-        <string>Name</string>
+        <string>Guest Data</string>
        </property>
-       <widget class="QLineEdit" name="lineEdit">
+       <widget class="QLabel" name="label_8">
         <property name="geometry">
          <rect>
-          <x>0</x>
+          <x>-60</x>
           <y>30</y>
-          <width>301</width>
+          <width>47</width>
           <height>20</height>
          </rect>
         </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>321</width>
+          <height>52</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_Name"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>SSN</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_ssn"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </widget>
       </widget>
      </item>
