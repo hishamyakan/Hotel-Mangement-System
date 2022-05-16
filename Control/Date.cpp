@@ -9,9 +9,9 @@
  *******************************************************************************/
 
 #include "Control/Date.h"
+#include <QDate>
 
-
-Date TodayDate = {13,5,2022};
+Date TodayDate = {QDate::currentDate().day(), QDate::currentDate().month(), QDate::currentDate().year()};
 
 
 bool Date::isAfter(Date otherDate){

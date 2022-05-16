@@ -15,6 +15,9 @@ public:
     explicit updateDeleteRes(QWidget *parent = nullptr);
     ~updateDeleteRes();
 
+private slots:
+    void on_GetReservationList_clicked();
+
 private:
     Ui::updateDeleteRes *ui;
 };

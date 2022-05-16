@@ -38,3 +38,9 @@ void ReserveRoom::on_AddReservation_clicked()
 
 }
 
+
+void ReserveRoom::on_Submit_clicked()
+{
+
+}
+

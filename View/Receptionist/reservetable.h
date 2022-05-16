@@ -15,6 +15,9 @@ public:
     explicit ReserveTable(QWidget *parent = nullptr);
     ~ReserveTable();
 
+private slots:
+    void on_Reserve_clicked();
+
 private:
     Ui::ReserveTable *ui;
 };

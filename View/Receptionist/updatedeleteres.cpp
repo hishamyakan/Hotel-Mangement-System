@@ -24,3 +24,9 @@ updateDeleteRes::~updateDeleteRes()
 {
     delete ui;
 }
+
+void updateDeleteRes::on_GetReservationList_clicked()
+{
+
+}
+

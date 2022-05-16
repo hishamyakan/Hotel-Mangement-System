@@ -27,9 +27,6 @@ void AddGuestDetails::on_AddData_clicked()
     string mail = ui->lineEdit_Mail->text().toStdString();
 
     QMessageBox::about(this,"Confirmation","Congratulations guest data is added successfully");
-
-
-
     close();
 
 }

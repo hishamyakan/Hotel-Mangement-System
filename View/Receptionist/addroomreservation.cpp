@@ -30,3 +30,18 @@ AddRoomReservation::~AddRoomReservation()
 {
     delete ui;
 }
+
+void AddRoomReservation::on_Reserve_clicked()
+{
+
+
+
+    ui->dateEdit_sDate->date().day();
+    ui->dateEdit_sDate->date().month();
+    ui->dateEdit_sDate->date().year();
+
+    ui->dateEdit_eDate->date().day();
+    ui->dateEdit_eDate->date().month();
+    ui->dateEdit_eDate->date().year();
+}
+
