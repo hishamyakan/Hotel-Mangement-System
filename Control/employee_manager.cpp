@@ -102,3 +102,17 @@ vector<EmployeeInfo> getEmployees(){
 
 
 }
+
+
+int totalNumberOfEmployees(){
+
+	int count = 0 ;
+
+	for(auto record : EmployeeDatabase){
+
+		count+= record.size();
+
+	}
+
+	return count;
+}

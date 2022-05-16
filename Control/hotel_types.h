@@ -8,7 +8,7 @@
 #ifndef HOTEL_TYPES_H_
 #define HOTEL_TYPES_H_
 
-#include "Date.h"
+#include "Control/Date.h"
 
 
 typedef enum{
@@ -36,5 +36,17 @@ typedef enum{
 	CASH , CREDIT
 
 }PaymentMethod;
+
+
+typedef struct{
+
+	int number;
+
+	string type;
+
+	string status;
+
+}ReservableInfo;
+
 
 #endif /* HOTEL_TYPES_H_ */

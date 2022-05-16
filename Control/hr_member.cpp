@@ -5,8 +5,8 @@
  *      Author: User
  */
 
-#include "hr_member.h"
-#include "employee_manager.h"
+#include "Control/hr_member.h"
+#include "Control/employee_manager.h"
 
 
 

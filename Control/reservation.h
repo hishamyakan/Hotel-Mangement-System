@@ -11,8 +11,8 @@
 #ifndef RESERVATION_H_
 #define RESERVATION_H_
 
-#include "guest.h"
-#include "hotel_types.h"
+#include "Control/guest.h"
+#include "Control/hotel_types.h"
 #include <vector>
 
 using namespace std;
@@ -32,6 +32,7 @@ private:
 
 	Date ReservationDate;
 
+	Date EndDate;
 
 public:
 
@@ -53,6 +54,9 @@ public:
 
 	Date getStartDate();
 
+	void setEndDate(Date EndDate);
+
+	Date getEndDate();
 };
 
 
@@ -63,12 +67,12 @@ class Room_Reservation : public Reservation{
 
 private:
 
-	RoomType type;
 
-	Date EndDate;
 	//int numberOfDays;
 
 public:
+
+	RoomType type;
 
 	Room_Reservation(){
 		type = SINGLE_ROOM;
@@ -82,9 +86,6 @@ public:
 
 	string getRoomType();
 
-	void setEndDate(Date EndDate);
-
-	Date getEndDate();
 	//int getDuration();
 
 
@@ -98,9 +99,11 @@ class Vehicle_Reservation : public Reservation{
 
 private:
 
-	VehicleType type;
+
 
 public:
+
+	VehicleType type;
 
 	Vehicle_Reservation(){}
 
@@ -120,9 +123,11 @@ class Hall_Reservation : public Reservation{
 
 private:
 
-	HallType type;
+
 
 public:
+
+	HallType type;
 
 	Hall_Reservation(){}
 
@@ -165,4 +170,7 @@ public:
 
 };
 
+extern vector<Reservation> current_reservations;
+
+extern vector<Reservation> check_outs;
 #endif /* RESERVATION_H_ */

@@ -63,7 +63,17 @@ Date Reservation::getStartDate(){
 
 
 
+void Reservation::setEndDate(Date EndDate){
 
+	this->EndDate = EndDate;
+
+}
+
+Date Reservation::getEndDate(){
+
+	return EndDate;
+
+}
 /******************************************************************************
  *                   Room Reservation Methods                                 *
  ******************************************************************************/
@@ -90,11 +100,6 @@ void Room_Reservation::setRoomType(string type){
 
 
 
-void Room_Reservation::setEndDate(Date EndDate){
-
-	this->EndDate = EndDate;
-
-}
 /*
 void Room_Reservation::setDuration(int days){
 
@@ -121,11 +126,7 @@ string Room_Reservation::getRoomType(){
 }
 
 
-Date Room_Reservation::getEndDate(){
 
-	return EndDate;
-
-}
 /*
 int Room_Reservation::getDuration(){
 

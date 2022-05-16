@@ -9,7 +9,7 @@
 #define EMPLOYEE_MANAGER_H_
 
 #include <vector>
-#include "employee.h"
+#include "Control/employee.h"
 using namespace std;
 
 
@@ -24,6 +24,8 @@ extern vector<vector<Employee>> EmployeeDatabase;
 void saveDatabase(vector<EmployeeInfo> info);
 
 vector<EmployeeInfo> getEmployees();
+
+int totalNumberOfEmployees();
 /*void addEmployee(EmployeeInfo info);*/
 
 
