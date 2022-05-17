@@ -45,8 +45,8 @@ vector<Employee> Maintenance_Members= {
 vector<Employee> HouseKeepers = {
 
 		HouseKeeper("Bassem Khaled", "234-02-5643" , "HouseKeeping" , 2000),
-		HouseKeeper("Abdo Moota","435-01-5611" , "HouseKeeping" , 2000),
-		HouseKeeper("Bahgat Saber",   "576-01-1244" , "HouseKeeping" , 2200)
+        HouseKeeper("Amany Mahmoud","435-01-5611" , "HouseKeeping" , 2000),
+        HouseKeeper("Bahgat Saaed",   "576-01-1244" , "HouseKeeping" , 2200)
 
 };
 

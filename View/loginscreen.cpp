@@ -3,6 +3,8 @@
 #include <QPixmap>
 #include <QMessageBox>
 #include <QVector>
+#include <QDate>
+#include "Control/Date.h"
 
 
 QVector<QVector<QString>>myDataBase;

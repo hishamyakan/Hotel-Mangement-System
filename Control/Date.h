@@ -11,6 +11,7 @@
 #ifndef DATE_H_
 #define DATE_H_
 
+#include <QDate>
 #include <string>
 using namespace std;
 
@@ -25,6 +26,8 @@ typedef struct Date{
 	bool isAfter(Date otherDate);
 
 	bool isBetween(Date d1 , Date d2);
+
+    bool isEqualTo(Date d);
 
 	string formattedDate();
 }Date;
@@ -47,6 +50,9 @@ typedef struct Time{
 	string formattedTime();
 
 }Time;
+
+
+int numberOfDaysBetweenTwoDates(Date start, Date end);
 
 
 extern Date TodayDate;

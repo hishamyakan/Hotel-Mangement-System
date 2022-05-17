@@ -45,6 +45,23 @@
 #define TABLE_INDEX 				9
 
 
+#define SINGLE_ROOM_PRICE			2500
+#define DOUBLE_ROOM_PRICE			3000
+#define ROYAL_SUITE_PRICE			5000
+
+#define	CAR_PRICE					500
+#define BUS_PRICE					2000
+#define LIMO_PRICE					1000
+
+
+#define SMALL_HALL_PRICE			40000
+#define MEDIUM_HALL_PRICE			50000
+#define LARGE_HALL_PRICE			60000
+
+#define TABLE_PRICE 				200
+
+
+
 extern vector<Room> rooms;
 
 extern vector<Hall> Halls;
@@ -73,5 +90,8 @@ void setRoomsStatus(vector<string> status);
 
 void setVehiclesStatus(vector<string> status);
 
+vector<Guest_ReservationsInfo> getGuestReservations(string SSN);
+
+void removeNulls();
 
 #endif /* RESERVABLE_MANAGER_H_ */

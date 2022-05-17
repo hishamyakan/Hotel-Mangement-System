@@ -67,6 +67,15 @@ void CheckAvailableRoom::on_RoomStatus_clicked()
 
      }
 
+     vector<int>count = AvailabilityCounts();
+     ui->lineEdit->setText(QString::number(count[0]));
+     ui->lineEdit_2->setText(QString::number(count[1]));
+     ui->lineEdit_3->setText(QString::number(count[2]));
+     ui->lineEdit_4->setText(QString::number(count[3]));
+     ui->lineEdit_5->setText(QString::number(count[4]));
+     ui->lineEdit_6->setText(QString::number(count[5]));
+
+
 
 
 }
@@ -89,6 +98,14 @@ void CheckAvailableRoom::on_VehicleStatus_clicked()
             model->setData(model->index(i,Status),QString::fromStdString(info[i].status));
 
     }
+    vector<int>count = AvailabilityCounts();
+    ui->lineEdit->setText(QString::number(count[0]));
+    ui->lineEdit_2->setText(QString::number(count[1]));
+    ui->lineEdit_3->setText(QString::number(count[2]));
+    ui->lineEdit_4->setText(QString::number(count[3]));
+    ui->lineEdit_5->setText(QString::number(count[4]));
+    ui->lineEdit_6->setText(QString::number(count[5]));
+
 
 }
 

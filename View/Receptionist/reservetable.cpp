@@ -25,5 +25,6 @@ void ReserveTable::on_Reserve_clicked()
 {
    string guestName = ui->lineEdit_Name->text().toStdString();
    QTime time = ui->dateTimeEdit->time();
+   QMessageBox::information(this, "Reservation","You have reserved a table at "+time.toString()+" "+ui->dateTimeEdit->date().toString());
 }
 

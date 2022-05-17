@@ -64,7 +64,7 @@
        <item>
         <widget class="QPushButton" name="addGuestData">
          <property name="text">
-          <string>Add Guest Data</string>
+          <string>Add Guest Data(Companion)</string>
          </property>
         </widget>
        </item>

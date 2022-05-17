@@ -8,7 +8,12 @@
 
 #include "Control/reservation.h"
 
-vector<Reservation> current_reservations;
+vector<Room_Reservation> current_room_reservations;
+vector<Hall_Reservation> current_hall_reservations;
+vector<Vehicle_Reservation> current_vehicle_reservations;
+vector<Table_Reservation> current_table_reservations;
+
+vector<Guest> g_Guests;
 
 vector<Reservation> check_outs;
 

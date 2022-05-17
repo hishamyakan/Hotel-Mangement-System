@@ -27,7 +27,7 @@
      <string>Reserve</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -58,12 +58,12 @@
          <item>
           <widget class="QLabel" name="label_2">
            <property name="text">
-            <string>Room Number</string>
+            <string>SSN</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_RoomNumber"/>
+          <widget class="QLineEdit" name="lineEdit_SSN"/>
          </item>
         </layout>
        </item>
@@ -85,7 +85,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>

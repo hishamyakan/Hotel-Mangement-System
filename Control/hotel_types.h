@@ -48,5 +48,15 @@ typedef struct{
 
 }ReservableInfo;
 
+typedef struct{
+
+    Date reservationDate;
+
+    string type;
+
+    void* reservation_ptr;
+
+}Guest_ReservationsInfo;
+
 
 #endif /* HOTEL_TYPES_H_ */
