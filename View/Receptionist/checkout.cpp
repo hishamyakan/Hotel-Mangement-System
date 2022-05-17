@@ -75,7 +75,14 @@ void CheckOut::on_CheckOut_2_clicked()
     {
          QMessageBox::information(this,"Warning","Please enter Credit Card Number");
     }
-
+    else  if( ui->Cash->isChecked() == true)
+    {
     QMessageBox::information(this,"Congratulations","Payment is Done");
+    }
+
+    else{
+        QMessageBox::information(this,"Congratulations","Payment is Done");
+    }
+
 }
 
