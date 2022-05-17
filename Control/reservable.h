@@ -110,6 +110,8 @@ public:
 
     void show();
 
+    bool isAvailable(Date d);
+
 };
 
 

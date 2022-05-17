@@ -26,6 +26,10 @@ private slots:
 
     void on_addFeedBack_clicked();
 
+    void on_CalcPay_clicked();
+
+    void on_CheckOut_2_clicked();
+
 private:
     Ui::CheckOut *ui;
 };

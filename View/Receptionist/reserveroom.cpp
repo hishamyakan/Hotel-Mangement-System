@@ -4,6 +4,8 @@
 #include "addroomreservation.h"
 #include "Control/guest.h"
 
+#include <QMessageBox>
+
 Guest newGuest;
 
 
@@ -43,10 +45,12 @@ void ReserveRoom::on_AddReservation_clicked()
     newGuest.setPhoneNumber(ui->lineEdit_Phone->text().toStdString());
     newGuest.setAddress(ui->lineEdit_Address->text().toStdString());
 
-    AddRoomReservation newRes(this,&newGuest);
+
+    //QMessageBox::information(this,"data",QString::fromStdString(newGuest.getSSN()));
+
+    AddRoomReservation newRes(nullptr,&newGuest);
     newRes.setModal(true);
     newRes.exec();
-    newGuest = Guest();
 
 
 }

@@ -2,6 +2,9 @@
 #include "ui_checkout.h"
 #include <QMessageBox>
 
+#include "Control/guest.h"
+#include "Control/receptionist_member.h"
+
 CheckOut::CheckOut(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::CheckOut)
@@ -49,5 +52,30 @@ void CheckOut::on_addFeedBack_clicked()
 {
     QMessageBox::information(this,"FeedBack","Congratulations, FeedBack added successfully.");
 
+}
+
+
+void CheckOut::on_CalcPay_clicked()
+{
+
+    Receptionist_Member r;
+    string name = ui->lineEdit_Name->text().toStdString();
+    string ssn = ui->lineEdit_ssn->text().toStdString();
+
+    long long k = r.getPayment(ssn);
+
+    QMessageBox::information(this,"Payment","The total amount to pay in EGP "+QString::number(k)+"EGP");
+
+}
+
+
+void CheckOut::on_CheckOut_2_clicked()
+{
+    if(ui->CreditCardNumber->text() == "" && ui->CreditCard->isChecked() == true)
+    {
+         QMessageBox::information(this,"Warning","Please enter Credit Card Number");
+    }
+
+    QMessageBox::information(this,"Congratulations","Payment is Done");
 }
 

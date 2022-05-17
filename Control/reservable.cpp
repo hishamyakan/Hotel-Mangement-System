@@ -186,6 +186,21 @@ string Hall::getType(){
 
 }
 
+bool Hall::isAvailable(Date d){
+
+    for(auto ptr : this->getReservations()){
+
+
+        if(d.isEqualTo(ptr->getStartDate())){
+
+            return false;
+
+        }
+    }
+
+    return true;
+}
+
 /******************************************************************************
  *                           Vehicle Methods                                  *
  ******************************************************************************/

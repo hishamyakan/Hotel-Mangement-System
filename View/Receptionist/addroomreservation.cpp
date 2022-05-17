@@ -27,7 +27,7 @@ AddRoomReservation::AddRoomReservation(QWidget *parent,Guest *myGuest) :
 
         ui->dateEdit_eDate->setMaximumDate(QDate::currentDate().addYears(2));
         ui->dateEdit_eDate->setMinimumDate(QDate::currentDate());
-        ui->dateEdit_eDate->setDate(QDate::currentDate());
+        ui->dateEdit_eDate->setDate(QDate::currentDate().addDays(1));
 
 
 
@@ -49,14 +49,14 @@ void AddRoomReservation::on_Reserve_clicked()
     sDate.month = ui->dateEdit_sDate->date().month();
     sDate.year = ui->dateEdit_sDate->date().year();
 
-    eDate.day =  ui->dateEdit_eDate->date().day();
-    eDate.month =ui->dateEdit_eDate->date().month();
+    eDate.day = ui->dateEdit_eDate->date().day();
+    eDate.month= ui->dateEdit_eDate->date().month();
     eDate.year =ui->dateEdit_eDate->date().year();
 
     Room_Reservation res;
     res.setEndDate(eDate);
     res.setStartDate(sDate);
- res.setGuest(*this->myGuest);
+    res.setGuest(*this->myGuest);
     if(ui->roomType->currentText() == "Single Room")
     {
         res.type = SINGLE_ROOM;

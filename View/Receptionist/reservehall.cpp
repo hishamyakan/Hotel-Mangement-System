@@ -1,6 +1,11 @@
 #include "reservehall.h"
 #include "ui_reservehall.h"
 
+#include "Control/Date.h"
+#include "Control/reservation.h"
+#include "Control/guest.h"
+#include "Control/receptionist_member.h"
+
 #include <string>
 #include <QMessageBox>
 
@@ -48,7 +53,31 @@ void ReserveHall::on_Reserve_clicked()
     string guestAddress = ui->Adress->text().toStdString();
     int guestNoAttend = ui->NoAttend->text().toInt();
 
-    QDate guestDate = ui->dateEdit->date();
+    QDate resDate = ui->dateEdit->date();
+
+    Guest myGuest(guestName,guestSSN,guestAddress,guestMail," ");
+    Hall_Reservation myHall;
+    myHall.setGuest(myGuest);
+    myHall.setStartDate({resDate.day(),resDate.month(),resDate.year()});
+
+    QString temp;
+
+    if(ui->HallSize->currentText() == "Small size Hall(up to 80 guests)")
+    {
+        temp  = "Small";
+        myHall.type = SMALL;
+
+    }
+    else if(ui->HallSize->currentText() == "Medium size Hall(up to 200 guests)")
+    {
+        temp  = "Medium";
+        myHall.type = MEDIUM;
+    }
+    else{
+        temp  = "Large";
+        myHall.type = LARGE;
+    }
+
 
     if(true == creditCard)
     {
@@ -59,23 +88,18 @@ void ReserveHall::on_Reserve_clicked()
         //do Nothing
     }
 
-    if(ui->HallSize->currentIndex() == 0)
-    {
+Receptionist_Member r1;
+if(r1.reserveHall(myHall))
+{
+     QMessageBox::information(this,"Hall Reserrvation",temp+" Hall was reserved successfully at :"+ resDate.toString());
+}
 
-    }
-    else if (ui->HallSize->currentIndex() == 1)
-    {
-
-    }
-
-    else if(ui->HallSize->currentIndex() == 2)
-    {
-
-    }
+else
+{
+    QMessageBox::information(this,"Warning","Unfortunately No"+temp+" halls are available during this date : "+resDate.toString());
+}
 
 
-    QMessageBox::information(this,"Hall Reserrvation","Hall was reserved successfully");
-    QMessageBox::information(this,"Warning","Unfortunately No halls are available during this date");
 
 }
 
