@@ -31,7 +31,7 @@ This system allows different types of reservations including: Room reservation w
 The system would have the ability to modify, update and cancel reservations if needed. The system would be able to keep track of guest profiles and total payments, as well as check-in and check-out history. (Provide guest profile and total payment.). The system should be able to keep track of the rooms information and status (occupied, available). The system gives the HR department the ability to add and remove employees from the system or edit their data and check their attendance. The housekeeping department has the ability to update the room status and check the cleaning resources and employees available. The maintenance department can update the room status (out of order or not) and any hotel resource maintenance state. The system shall record the guests’ feedback at the end of their stay. (The system allows the guests to rate their visit after the end of their stay.)  
 The system will provide necessary employee information and full access to the manager.
 
-### Software implementation Detals 
+### Software implementation Details 
 This Software is implemented using the C++ Programming language and the QT Frame Work.  
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) 
 ![Qt](https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white)
