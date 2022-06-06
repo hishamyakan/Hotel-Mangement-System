@@ -8,8 +8,9 @@
     - [Introduction](#introduction)
     - [Software Target Beneficiaries](#software-target-beneficiaries)
     - [Hotel System Detailed Description](#hotel-system-detailed-description)
-    - [Software implementation Detals](#software-implementation-detals)
+    - [Software implementation Details](#software-implementation-details)
     - [Download Links](#download-links)
+    - [Software Environment](#software-environment)
     - [How to Install and Run the Project](#how-to-install-and-run-the-project)
         - [Install via zip Folder](#install-via-zip-folder)
     - [Demo](#demo)
@@ -39,7 +40,8 @@ This Software is implemented using the C++ Programming language and the QT Frame
 ### Download Links
 Download the zip folder from this link : [Download Zip Folder](https://drive.google.com/file/d/1M1ol_mOS2gLDrZGshcL70OOUlNJjixAF/view)
 
-
+### Software Environment
+Required Operating System is **Windows 10 64 Bit Version**.
 
 
 ### How to Install and Run the Project
